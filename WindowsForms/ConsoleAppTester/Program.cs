@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using DataAccessLayer;
 
 namespace ConsoleAppTester
 {
@@ -10,6 +11,8 @@ namespace ConsoleAppTester
     {
         static void Main(string[] args)
         {
+            var repo = new OMDBRepository();
+            
         }
     }
 }
