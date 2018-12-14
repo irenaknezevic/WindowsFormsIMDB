@@ -12,7 +12,7 @@ namespace DataAccessLayer
 {
     public class OMDBRepository
     {
-        private List<Film> _omdb = new List<Film>();
+        private Film film = new Film();
         
 
         public OMDBRepository()
@@ -21,44 +21,47 @@ namespace DataAccessLayer
         }
 
         //vraca listu objekata klase omdb
-        public List<Film> SearchMovie(string searchMovie, string searchYear)
+        public Film SearchMovie(string searchMovie, string searchYear)
         {
             string url = KreiranjeUrl(searchMovie, searchYear);
             string json = CallRestMethod(url);
 
             Film film = JsonConvert.DeserializeObject<Film>(json);
-
+            /*
+                JObject jsonObject = JObject.Parse(json);
+                var title = jsonObject["Title"];
+             * */
             //foreach (JObject item in jsonObject)
             //{
-                _omdb.Add(new Film
+            new Film
                 {
-                    Title = (string)film.Title,
-                    Year = (string)film.Year,
-                    Rated = (string)film.Rated,
-                    Released = (string)film.Released,
-                    Runtime = (string)film.Runtime,
-                    Genre = (string)film.Genre,
-                    Director = (string)film.Director,
-                    Writer = (string)film.Writer,
-                    Actors = (string)film.Actors,
-                    Plot = (string)film.Plot,
-                    Language = (string)film.Language,
-                    Country = (string)film.Country,
-                    Awards = (string)film.Awards,
-                    Poster = (string)film.Poster,
-                    Metascore = (int)film.Metascore,
-                    imdbRating = (string)film.imdbRating,
-                    imdbVotes = (string)film.imdbVotes,
-                    imdbID = (string)film.imdbID,
-                    Type = (string)film.Type,
-                    DVD = (string)film.DVD,
-                    BoxOffice = (string)film.BoxOffice,
-                    Production = (string)film.Production,
-                    Website = (string)film.Website,
-                    Response = (string)film.Response
-                });
+                Title = (string)film.Title,
+                Year = (string)film.Year,
+                Rated = (string)film.Rated,
+                Released = (string)film.Released,
+                Runtime = (string)film.Runtime,
+                Genre = (string)film.Genre,
+                Director = (string)film.Director,
+                Writer = (string)film.Writer,
+                Actors = (string)film.Actors,
+                Plot = (string)film.Plot,
+                Language = (string)film.Language,
+                Country = (string)film.Country,
+                Awards = (string)film.Awards,
+                Poster = (string)film.Poster,
+                Metascore = (int)film.Metascore,
+                imdbRating = (string)film.imdbRating,
+                imdbVotes = (string)film.imdbVotes,
+                imdbID = (string)film.imdbID,
+                Type = (string)film.Type,
+                DVD = (string)film.DVD,
+                BoxOffice = (string)film.BoxOffice,
+                Production = (string)film.Production,
+                Website = (string)film.Website,
+                Response = (string)film.Response
+            };
             //}
-            return _omdb;
+            return film;
         }
 
        
@@ -77,9 +80,9 @@ namespace DataAccessLayer
             return result;
         }
 
-        public static string KreiranjeUrl(string film, string godina)
+        public static string KreiranjeUrl(string movie, string year)
         {
-            var link = "http://www.omdbapi.com/?t=" + film + "&y="+ godina +"&apikey=e55c1343";
+            var link = "http://www.omdbapi.com/?t=" + movie + "&y="+ year +"&apikey=e55c1343";
             return link;
         }
     }
