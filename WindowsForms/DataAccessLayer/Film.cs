@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace DataAccessLayer
 {
-    public class OMDB
+    public class Film
     {
         public string Title { get; set; }
         public string Year { get; set; }

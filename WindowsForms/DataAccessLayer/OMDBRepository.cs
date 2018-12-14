@@ -1,5 +1,6 @@
 ﻿using System;
 using Newtonsoft.Json.Linq;
+using Newtonsoft.Json;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
@@ -11,52 +12,53 @@ namespace DataAccessLayer
 {
     public class OMDBRepository
     {
-        private List<OMDB> _omdb = new List<OMDB>();
+        private List<Film> _omdb = new List<Film>();
         
 
         public OMDBRepository()
         {
-           
+
         }
+
         //vraca listu objekata klase omdb
-        public List<OMDB> SearchMovie(string searchText)
+        public List<Film> SearchMovie(string searchMovie, string searchYear)
         {
-            string url = KreiranjeUrl(searchText);
+            string url = KreiranjeUrl(searchMovie, searchYear);
             string json = CallRestMethod(url);
 
-            JArray jsonObject = JArray.Parse(json);
-            foreach (JObject item in jsonObject)
-            {
-                _omdb.Add(new OMDB
-                {
-                    Title = (string)item.GetValue("Title"),
-                    Year = (string)item.GetValue("Year"),
-                    Rated = (string)item.GetValue("Rated"),
-                    Released = (string)item.GetValue("Released"),
-                    Runtime = (string)item.GetValue("Runtime"),
-                    Genre = (string)item.GetValue("Genre"),
-                    Director = (string)item.GetValue("Director"),
-                    Writer = (string)item.GetValue("Writer"),
-                    Actors = (string)item.GetValue("Actors"),
-                    Plot = (string)item.GetValue("Plot"),
-                    Language = (string)item.GetValue("Language"),
-                    Country = (string)item.GetValue("Country"),
-                    Awards = (string)item.GetValue("Awards"),
-                    Poster = (string)item.GetValue("Poster"),
+            Film film = JsonConvert.DeserializeObject<Film>(json);
 
-                    Metascore = (int)item.GetValue("Metascore"),
-                    imdbRating = (string)item.GetValue("imdbRating"),
-                    imdbVotes = (string)item.GetValue("imdbVotes"),
-                    imdbID = (string)item.GetValue("imdbID"),
-                    Type = (string)item.GetValue("Type"),
-                    DVD = (string)item.GetValue("DVD"),
-                    BoxOffice = (string)item.GetValue("BoxOffice"),
-                    Production = (string)item.GetValue("Production"),
-                    Website = (string)item.GetValue("Website"),
-                    Response = (string)item.GetValue("Response")
+            //foreach (JObject item in jsonObject)
+            //{
+                _omdb.Add(new Film
+                {
+                    Title = (string)film.Title,
+                    Year = (string)film.Year,
+                    Rated = (string)film.Rated,
+                    Released = (string)film.Released,
+                    Runtime = (string)film.Runtime,
+                    Genre = (string)film.Genre,
+                    Director = (string)film.Director,
+                    Writer = (string)film.Writer,
+                    Actors = (string)film.Actors,
+                    Plot = (string)film.Plot,
+                    Language = (string)film.Language,
+                    Country = (string)film.Country,
+                    Awards = (string)film.Awards,
+                    Poster = (string)film.Poster,
+                    Metascore = (int)film.Metascore,
+                    imdbRating = (string)film.imdbRating,
+                    imdbVotes = (string)film.imdbVotes,
+                    imdbID = (string)film.imdbID,
+                    Type = (string)film.Type,
+                    DVD = (string)film.DVD,
+                    BoxOffice = (string)film.BoxOffice,
+                    Production = (string)film.Production,
+                    Website = (string)film.Website,
+                    Response = (string)film.Response
                 });
-                return _omdb;
-            }
+            //}
+            return _omdb;
         }
 
        
@@ -75,9 +77,9 @@ namespace DataAccessLayer
             return result;
         }
 
-        public static string KreiranjeUrl(string film)
+        public static string KreiranjeUrl(string film, string godina)
         {
-            var link = "http://www.omdbapi.com/?t=" + film + "&apikey=e55c1343";
+            var link = "http://www.omdbapi.com/?t=" + film + "&y="+ godina +"&apikey=e55c1343";
             return link;
         }
     }

@@ -11,8 +11,16 @@ namespace ConsoleAppTester
     {
         static void Main(string[] args)
         {
+            Console.WriteLine("Upisi film:");
+            string movie = Console.ReadLine();
+            Console.WriteLine("Upisi godinu:");
+            string year = Console.ReadLine();
             var repo = new OMDBRepository();
-            
+            foreach(var naslov in repo.SearchMovie(movie, year))
+            {
+                Console.WriteLine(naslov.Genre+" "+ naslov.Year);
+            }
+            Console.ReadKey();
         }
     }
 }
