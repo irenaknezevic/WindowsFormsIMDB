@@ -12,59 +12,80 @@ namespace DataAccessLayer
 {
     public class OMDBRepository
     {
-        private Film film = new Film();
-        
+        public OmdbMovie _omdbMovie = new OmdbMovie();
+        //public Movie _movie = new Movie();
+
 
         public OMDBRepository()
         {
 
         }
 
-        //vraca listu objekata klase omdb
-        public Film SearchMovie(string searchMovie, string searchYear)
+        /*public Movie SearchMovie(string searchMovie, string searchYear)
         {
             string url = KreiranjeUrl(searchMovie, searchYear);
             string json = CallRestMethod(url);
 
-            Film film = JsonConvert.DeserializeObject<Film>(json);
+            Movie _movie = JsonConvert.DeserializeObject<Movie>(json);
+
+            new Movie
+            {
+                Id = (int)_movie.Id,
+                Rating=(float)_movie.Rating,
+
+            };
+          
+            return _movie;
+        }*/
+
+        //vraca listu objekata klase omdb
+        public OmdbMovie SearchMovie(string searchMovie, string searchYear)
+        {
+            string url = KreiranjeUrl(searchMovie, searchYear);
+            string json = CallRestMethod(url);
+
+            OmdbMovie _omdbMovie = JsonConvert.DeserializeObject<OmdbMovie>(json);
             /*
                 JObject jsonObject = JObject.Parse(json);
                 var title = jsonObject["Title"];
              * */
             //foreach (JObject item in jsonObject)
             //{
-            new Film
+            new OmdbMovie
                 {
-                Title = (string)film.Title,
-                Year = (string)film.Year,
-                Rated = (string)film.Rated,
-                Released = (string)film.Released,
-                Runtime = (string)film.Runtime,
-                Genre = (string)film.Genre,
-                Director = (string)film.Director,
-                Writer = (string)film.Writer,
-                Actors = (string)film.Actors,
-                Plot = (string)film.Plot,
-                Language = (string)film.Language,
-                Country = (string)film.Country,
-                Awards = (string)film.Awards,
-                Poster = (string)film.Poster,
-                Metascore = (int)film.Metascore,
-                imdbRating = (string)film.imdbRating,
-                imdbVotes = (string)film.imdbVotes,
-                imdbID = (string)film.imdbID,
-                Type = (string)film.Type,
-                DVD = (string)film.DVD,
-                BoxOffice = (string)film.BoxOffice,
-                Production = (string)film.Production,
-                Website = (string)film.Website,
-                Response = (string)film.Response
+                Title = (string)_omdbMovie.Title,
+                Year = (string)_omdbMovie.Year,
+                Rated = (string)_omdbMovie.Rated,
+                Released = (string)_omdbMovie.Released,
+                Runtime = (string)_omdbMovie.Runtime,
+                Genre = (string)_omdbMovie.Genre,
+                Director = (string)_omdbMovie.Director,
+                Writer = (string)_omdbMovie.Writer,
+                Actors = (string)_omdbMovie.Actors,
+                Plot = (string)_omdbMovie.Plot,
+                Language = (string)_omdbMovie.Language,
+                Country = (string)_omdbMovie.Country,
+                Awards = (string)_omdbMovie.Awards,
+                Poster = (string)_omdbMovie.Poster,
+                Metascore = (int)_omdbMovie.Metascore,
+                imdbRating = (string)_omdbMovie.imdbRating,
+                imdbVotes = (string)_omdbMovie.imdbVotes,
+                imdbID = (string)_omdbMovie.imdbID,
+                Type = (string)_omdbMovie.Type,
+                DVD = (string)_omdbMovie.DVD,
+                BoxOffice = (string)_omdbMovie.BoxOffice,
+                Production = (string)_omdbMovie.Production,
+                Website = (string)_omdbMovie.Website,
+                Response = (string)_omdbMovie.Response
             };
             //}
-            return film;
+            return _omdbMovie;
         }
 
-       
+        /*public void AddMovie(Movie movie)
+        {
+            movie.Add(movie);
+        }*/
 
         public static string CallRestMethod(string url)
         {
