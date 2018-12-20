@@ -10,7 +10,7 @@ namespace DataAccessLayer
     {
         public string Title { get; set; }
         public int Year { get; set; }
-        public char Rated { get; set; }
+        public string Rated { get; set; }
         public string Released { get; set; }
         public string Runtime { get; set; }
         public string Genre { get; set; }

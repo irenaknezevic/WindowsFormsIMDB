@@ -19,7 +19,7 @@ namespace ConsoleAppTester
 
             var provjera = repo.SearchOmdbMovie(sMovie, sYear);
 
-            Console.WriteLine("Naslov: " + provjera.Title + "\n Glumci: " + provjera.Actors);
+            Console.WriteLine(provjera.Actors +"\n" + provjera.Country);
             Console.ReadKey();
         }
     }
