@@ -16,6 +16,7 @@ namespace ConsoleAppTester
             Console.WriteLine("Upisi godinu:");
             string sYear = Console.ReadLine();
             var repo = new OMDBRepository();
+
             var provjera = repo.SearchOmdbMovie(sMovie, sYear);
 
             Console.WriteLine("Naslov: " + provjera.Title + "\n Glumci: " + provjera.Actors);

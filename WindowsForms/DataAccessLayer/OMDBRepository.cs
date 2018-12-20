@@ -94,7 +94,7 @@ namespace DataAccessLayer
             using (DbConnection oConnection = new SqlConnection(sSqlConnectionString))
             using (DbCommand oCommand = oConnection.CreateCommand())
             {
-                oCommand.CommandText = "INSERT INTO Omdb_Filmovi (ID, TITLE, YEAR, RATED, RELEASED, RUNTIME, GENRE, DIRECTOR, WRITER, ACTORS, PLOT, LANGUAGE, COUNTRY, AWARDS, POSTER, METASCORE, IMBDRATING) VALUES ('" + movie.Id + "', '" + movie.Title + "', '" + movie.Year + "', '" + movie.Rated + "', '" + movie.Released + "')";
+                oCommand.CommandText = "INSERT INTO Omdb_Filmovi (ID, TITLE, YEAR, RATED, RELEASED, RUNTIME, GENRE, DIRECTOR, WRITER, ACTORS, PLOT, LANGUAGE, COUNTRY, AWARDS, POSTER, METASCORE, IMBDRATING) VALUES ('" + movie.Id + "', '" + movie.Title + "', '" + movie.Year + "', '" + movie.Rated + "', '" + movie.Released + "', '" + movie.Runtime + "')";
                 oConnection.Open();
                 using (DbDataReader reader = oCommand.ExecuteReader())
                 {
@@ -133,7 +133,7 @@ namespace DataAccessLayer
             using (DbConnection oConnection = new SqlConnection(sSqlConnectionString))
             using (DbCommand oCommand = oConnection.CreateCommand())
             {
-                oCommand.CommandText = "DELETE FROM Omdb_Filmovi WHERE USER_ID = " + movie; //??
+                oCommand.CommandText = "DELETE FROM Omdb_Filmovi WHERE ID = " + movie.Id; //??
                 oConnection.Open();
                 using (DbDataReader reader = oCommand.ExecuteReader())
                 {
