@@ -7,13 +7,19 @@ using System.Linq;
 using System.Net;
 using System.Text;
 using System.Threading.Tasks;
+using System.Data.Common;
+using System.Data.SqlClient;
 
 namespace DataAccessLayer
 {
     public class OMDBRepository
     {
+        string connectionString = "Data Source=193.198.57.183; Initial Catalog = DotNet;User ID = vjezbe; Password = vjezbe";
+
         public OmdbMovie _omdbMovie = new OmdbMovie();
-        //public Movie _movie = new Movie();
+
+        public Movie _movie = new Movie();
+        public List<Movie> lista_movie = new List<Movie>();
 
 
         public OMDBRepository()
@@ -21,7 +27,7 @@ namespace DataAccessLayer
 
         }
 
-        /*public Movie SearchMovie(string searchMovie, string searchYear)
+        public Movie SearchMovie(string searchMovie, string searchYear)
         {
             string url = KreiranjeUrl(searchMovie, searchYear);
             string json = CallRestMethod(url);
@@ -36,10 +42,10 @@ namespace DataAccessLayer
             };
           
             return _movie;
-        }*/
+        }
 
         //vraca listu objekata klase omdb
-        public OmdbMovie SearchMovie(string searchMovie, string searchYear)
+        public OmdbMovie SearchOmdbMovie(string searchMovie, string searchYear)
         {
             string url = KreiranjeUrl(searchMovie, searchYear);
             string json = CallRestMethod(url);
@@ -54,8 +60,8 @@ namespace DataAccessLayer
             new OmdbMovie
                 {
                 Title = (string)_omdbMovie.Title,
-                Year = (string)_omdbMovie.Year,
-                Rated = (string)_omdbMovie.Rated,
+                Year = (int)_omdbMovie.Year,
+                Rated = (char)_omdbMovie.Rated,
                 Released = (string)_omdbMovie.Released,
                 Runtime = (string)_omdbMovie.Runtime,
                 Genre = (string)_omdbMovie.Genre,
@@ -68,8 +74,8 @@ namespace DataAccessLayer
                 Awards = (string)_omdbMovie.Awards,
                 Poster = (string)_omdbMovie.Poster,
                 Metascore = (int)_omdbMovie.Metascore,
-                imdbRating = (string)_omdbMovie.imdbRating,
-                imdbVotes = (string)_omdbMovie.imdbVotes,
+                imdbRating = (float)_omdbMovie.imdbRating,
+                imdbVotes = (float)_omdbMovie.imdbVotes,
                 imdbID = (string)_omdbMovie.imdbID,
                 Type = (string)_omdbMovie.Type,
                 DVD = (string)_omdbMovie.DVD,
@@ -82,10 +88,59 @@ namespace DataAccessLayer
             return _omdbMovie;
         }
 
-        /*public void AddMovie(Movie movie)
+        public void AddMovie(Movie movie)
         {
-            movie.Add(movie);
-        }*/
+            string sSqlConnectionString = "Data Source=193.198.57.183; Initial Catalog = DotNet; User ID = vjezbe; Password = vjezbe";
+            using (DbConnection oConnection = new SqlConnection(sSqlConnectionString))
+            using (DbCommand oCommand = oConnection.CreateCommand())
+            {
+                oCommand.CommandText = "INSERT INTO Omdb_Filmovi (ID, TITLE, YEAR, RATED, RELEASED, RUNTIME, GENRE, DIRECTOR, WRITER, ACTORS, PLOT, LANGUAGE, COUNTRY, AWARDS, POSTER, METASCORE, IMBDRATING) VALUES ('" + movie.Id + "', '" + movie.Title + "', '" + movie.Year + "', '" + movie.Rated + "', '" + movie.Released + "')";
+                oConnection.Open();
+                using (DbDataReader reader = oCommand.ExecuteReader())
+                {
+                    reader.Read();
+                }
+            }
+        }
+
+        public Movie GetMovies()
+        {
+            var movies = new List<Movie>();
+            using (DbConnection connection = new SqlConnection(connectionString))
+            using (DbCommand command = connection.CreateCommand())
+            {
+                command.CommandText = "SELECT * FROM [Omdb_Filmovi]";
+                connection.Open();
+                using (DbDataReader reader = command.ExecuteReader())
+                {
+                    while (reader.Read())
+                    {
+                        movies.Add(new Movie()
+                        {
+                            Id = (int)reader["Id"],
+                            Rating=(float)reader["Rating"],
+                            //nasljeđena klasa OmdbMovies
+                        });
+                    }
+                }
+            }
+            return movies;
+        }
+
+        public void DeleteMovie(Movie movie)
+        {
+            string sSqlConnectionString = "Data Source=193.198.57.183; Initial Catalog = DotNet; User ID = vjezbe; Password = vjezbe";
+            using (DbConnection oConnection = new SqlConnection(sSqlConnectionString))
+            using (DbCommand oCommand = oConnection.CreateCommand())
+            {
+                oCommand.CommandText = "DELETE FROM Omdb_Filmovi WHERE USER_ID = " + movie; //??
+                oConnection.Open();
+                using (DbDataReader reader = oCommand.ExecuteReader())
+                {
+                    reader.Read();
+                }
+            }
+        }
 
         public static string CallRestMethod(string url)
         {

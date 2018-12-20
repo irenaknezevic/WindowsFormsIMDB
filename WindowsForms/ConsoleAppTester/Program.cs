@@ -15,11 +15,10 @@ namespace ConsoleAppTester
             string sMovie = Console.ReadLine();
             Console.WriteLine("Upisi godinu:");
             string sYear = Console.ReadLine();
-            var repo = new OmdbMovie();
-            foreach(var title in repo.SearchMovie(sMovie, sYear))
-            {
-                Console.WriteLine(title.Genre+ " " + title.Year);
-            }
+            var repo = new OMDBRepository();
+            var provjera = repo.SearchOmdbMovie(sMovie, sYear);
+
+            Console.WriteLine("Naslov: " + provjera.Title + "\n Glumci: " + provjera.Actors);
             Console.ReadKey();
         }
     }

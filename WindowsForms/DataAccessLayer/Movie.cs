@@ -6,10 +6,9 @@ using System.Threading.Tasks;
 
 namespace DataAccessLayer
 {
-    class Movie
+    public class Movie:OmdbMovie
     {
         public int Id { get; set; }
         public float Rating { get; set; }
-        public OmdbMovie _omdbMovie = new OmdbMovie();
     }
 }
