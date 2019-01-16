@@ -18,9 +18,12 @@ namespace ConsoleAppTester
             var repo = new OMDBRepository();
             Console.WriteLine("Upisi ocjenu:");
             string Rating = Console.ReadLine();
-            decimal fRating = Convert.ToDecimal(Rating);
 
             var provjera = repo.SearchOmdbMovie(sMovie, sYear);
+
+            //string imdbrate = Convert.ToString(provjera.imdbRating);
+            
+            //provjera.imdbRating = float.Parse(imdbrate.Replace(',', '.')); 
 
             Console.WriteLine(provjera.Title);
             Console.WriteLine(provjera.Year);
@@ -45,8 +48,9 @@ namespace ConsoleAppTester
             Console.WriteLine(provjera.Production);
             Console.WriteLine(provjera.Website);
             Console.WriteLine(provjera.Response);
+           //Console.WriteLine(fRating);
 
-            repo.AddMovie(provjera, (float)fRating);
+            repo.AddMovie(provjera, Rating);
             
             //Console.WriteLine(provjera.Actors +"\n" + provjera.Country);
             Console.ReadKey();

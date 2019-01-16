@@ -57,7 +57,7 @@ namespace DataAccessLayer
                 Awards = (string)_omdbMovie.Awards,
                 Poster = (string)_omdbMovie.Poster,
                 Metascore = (int)_omdbMovie.Metascore,
-                imdbRating = (float)_omdbMovie.imdbRating,
+                imdbRating = (string)_omdbMovie.imdbRating,
                 imdbVotes = (float)_omdbMovie.imdbVotes,
                 imdbID = (string)_omdbMovie.imdbID,
                 Type = (string)_omdbMovie.Type,
@@ -72,14 +72,15 @@ namespace DataAccessLayer
         }
 
   
-        public void AddMovie(OmdbMovie omdbMovie, float rating)
+        public void AddMovie(OmdbMovie omdbMovie, string rating)
         {
 
             string sSqlConnectionString = "Data Source=193.198.57.183; Initial Catalog = DotNet; User ID = vjezbe; Password = vjezbe";
             using (DbConnection oConnection = new SqlConnection(sSqlConnectionString))
             using (DbCommand oCommand = oConnection.CreateCommand())
             {
-                var query = "INSERT INTO Omdb_Filmovi (Title, Year, Rated, Released, Runtime, Genre, Director, Writer, Actors, Plot, Language, Country, Awards, Poster, Metascore, imdbRating, imdbVotes, imdbID, Type, DVD, BoxOffice, Production, Website, Response) VALUES ('" + omdbMovie.Title + "', '" + omdbMovie.Year + "', '" + omdbMovie.Rated + "', '" + omdbMovie.Released + "', '" + omdbMovie.Runtime + "', '" + omdbMovie.Genre + "', '" + omdbMovie.Director + "', '" + omdbMovie.Writer + "', '" + omdbMovie.Actors + "', '" + omdbMovie.Plot + "', '" + omdbMovie.Language + "', '" + omdbMovie.Country + "', '" + omdbMovie.Awards + "', '" + omdbMovie.Poster + "', '" + omdbMovie.Metascore + "', '" + omdbMovie.imdbRating + "', '" + omdbMovie.imdbVotes + "', '" + omdbMovie.imdbID + "', '" + omdbMovie.Type + "', '" + omdbMovie.DVD + "', '" + omdbMovie.BoxOffice + "', '" + omdbMovie.Production + "', '" + omdbMovie.Website + "', '" + omdbMovie.Response +  "')";
+                var query = "INSERT INTO Omdb_Filmovi (Title, Year, Rated, Released, Runtime, Genre, Director, Writer, Actors, Plot, Language, Country, Awards, Poster, Metascore, imdbRating, imdbVotes, imdbID, Type, DVD, BoxOffice, Production, Website, Response, Rating) VALUES ('" + omdbMovie.Title + "', '" + omdbMovie.Year + "', '" + omdbMovie.Rated + "', '" + omdbMovie.Released + "', '" + omdbMovie.Runtime + "', '" + omdbMovie.Genre + "', '" + omdbMovie.Director + "', '" + omdbMovie.Writer + "', '" + omdbMovie.Actors + "', '" + omdbMovie.Plot + "', '" + omdbMovie.Language + "', '" + omdbMovie.Country + "', '" + omdbMovie.Awards + "', '" + omdbMovie.Poster + "', '" + omdbMovie.Metascore + "', '" + omdbMovie.imdbRating + "', '" + omdbMovie.imdbVotes + "', '" + omdbMovie.imdbID + "', '" + omdbMovie.Type + "', '" + omdbMovie.DVD + "', '" + omdbMovie.BoxOffice + "', '" + omdbMovie.Production + "', '" + omdbMovie.Website + "', '" + omdbMovie.Response + "', '5.6')";
+
                 Console.WriteLine(query);
                 oCommand.CommandText = query;
                 oConnection.Open();
@@ -121,7 +122,7 @@ namespace DataAccessLayer
                             Awards = (string)reader["Awards"],
                             Poster = (string)reader["Poster"],
                             Metascore = (int)reader["Metascore"],
-                            imdbRating = (float)reader["imdbRating"],
+                            imdbRating = (string)reader["imdbRating"],
                             imdbVotes = (float)reader["imdbVotes"],
                             imdbID = (string)reader["imdbID"],
                             Type = (string)reader["Type"],

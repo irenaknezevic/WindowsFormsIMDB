@@ -23,7 +23,7 @@ namespace DataAccessLayer
         public string Awards { get; set; }
         public string Poster { get; set; }
         public int Metascore { get; set; }
-        public float imdbRating { get; set; }
+        public string imdbRating { get; set; }
         public float imdbVotes { get; set; }
         public string imdbID { get; set; }
         public string Type { get; set; }
