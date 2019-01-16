@@ -71,50 +71,17 @@ namespace DataAccessLayer
             return _omdbMovie;
         }
 
-
-        public Movie SearchMovie(float rating, OmdbMovie _omdbMovie)
-        {
-            new Movie
-            {
-                Rating = rating,
-                Title = (string)_omdbMovie.Title,
-                Year = (int)_omdbMovie.Year,
-                Rated = (string)_omdbMovie.Rated,
-                Released = (string)_omdbMovie.Released,
-                Runtime = (string)_omdbMovie.Runtime,
-                Genre = (string)_omdbMovie.Genre,
-                Director = (string)_omdbMovie.Director,
-                Writer = (string)_omdbMovie.Writer,
-                Actors = (string)_omdbMovie.Actors,
-                Plot = (string)_omdbMovie.Plot,
-                Language = (string)_omdbMovie.Language,
-                Country = (string)_omdbMovie.Country,
-                Awards = (string)_omdbMovie.Awards,
-                Poster = (string)_omdbMovie.Poster,
-                Metascore = (int)_omdbMovie.Metascore,
-                imdbRating = (float)_omdbMovie.imdbRating,
-                imdbVotes = (float)_omdbMovie.imdbVotes,
-                imdbID = (string)_omdbMovie.imdbID,
-                Type = (string)_omdbMovie.Type,
-                DVD = (string)_omdbMovie.DVD,
-                BoxOffice = (string)_omdbMovie.BoxOffice,
-                Production = (string)_omdbMovie.Production,
-                Website = (string)_omdbMovie.Website,
-                Response = (string)_omdbMovie.Response
-
-            };
-          
-            return movie;
-        }
-
   
-        public void AddMovie(Movie movie)
+        public void AddMovie(OmdbMovie omdbMovie, float rating)
         {
+
             string sSqlConnectionString = "Data Source=193.198.57.183; Initial Catalog = DotNet; User ID = vjezbe; Password = vjezbe";
             using (DbConnection oConnection = new SqlConnection(sSqlConnectionString))
             using (DbCommand oCommand = oConnection.CreateCommand())
             {
-                oCommand.CommandText = "INSERT INTO Omdb_Filmovi (Rating, Title, Year, Ratd, Released, Runtime, Genre, Director, Writer, Actors, Plot, Language, Country, Awards, Poster, Metascore, imdbRating, imdbVotes, imdbID, Type, DVD, BoxOffice, Production, Website, Response) VALUES ('" + movie.Rating + "', '" + movie.Title + "', '" + movie.Year + "', '" + movie.Rated + "', '" + movie.Released + "', '" + movie.Runtime + "', '" + movie.Genre + "', '" + movie.Director + "', '" + movie.Writer + "', '" + movie.Actors + "', '" + movie.Plot + "', '" + movie.Language + "', '" + movie.Country + "', '" + movie.Awards + "', '" + movie.Poster + "', '" + movie.Metascore + "', '" + movie.imdbRating + "', '"  + movie.imdbVotes + movie.imdbID + "', '" + movie.Type + "', '" + movie.DVD + "', '" + movie.BoxOffice + "', '" + movie.Production + "', '" + movie.Website + "', '" + movie.Response + "', '" + "')";
+                var query = "INSERT INTO Omdb_Filmovi (Title, Year, Rated, Released, Runtime, Genre, Director, Writer, Actors, Plot, Language, Country, Awards, Poster, Metascore, imdbRating, imdbVotes, imdbID, Type, DVD, BoxOffice, Production, Website, Response) VALUES ('" + omdbMovie.Title + "', '" + omdbMovie.Year + "', '" + omdbMovie.Rated + "', '" + omdbMovie.Released + "', '" + omdbMovie.Runtime + "', '" + omdbMovie.Genre + "', '" + omdbMovie.Director + "', '" + omdbMovie.Writer + "', '" + omdbMovie.Actors + "', '" + omdbMovie.Plot + "', '" + omdbMovie.Language + "', '" + omdbMovie.Country + "', '" + omdbMovie.Awards + "', '" + omdbMovie.Poster + "', '" + omdbMovie.Metascore + "', '" + omdbMovie.imdbRating + "', '" + omdbMovie.imdbVotes + "', '" + omdbMovie.imdbID + "', '" + omdbMovie.Type + "', '" + omdbMovie.DVD + "', '" + omdbMovie.BoxOffice + "', '" + omdbMovie.Production + "', '" + omdbMovie.Website + "', '" + omdbMovie.Response +  "')";
+                Console.WriteLine(query);
+                oCommand.CommandText = query;
                 oConnection.Open();
                 using (DbDataReader reader = oCommand.ExecuteReader())
                 {
@@ -123,7 +90,7 @@ namespace DataAccessLayer
             }
         }
 
-        public Movie GetMovies()
+        public List<Movie> GetMovies()
         {
             List<Movie> movies = new List<Movie>();
             using (DbConnection connection = new SqlConnection(connectionString))
