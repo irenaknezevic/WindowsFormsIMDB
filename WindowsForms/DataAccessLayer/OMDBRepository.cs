@@ -24,7 +24,7 @@ namespace DataAccessLayer
 
         public OMDBRepository()
         {
-
+            lista_movie = GetMovies();
         }
 
         //vraca listu objekata klase omdb
@@ -37,7 +37,7 @@ namespace DataAccessLayer
             /*
                 JObject jsonObject = JObject.Parse(json);
                 var title = jsonObject["Title"];
-             * */
+            */
             //foreach (JObject item in jsonObject)
             //{
             new OmdbMovie
@@ -79,7 +79,7 @@ namespace DataAccessLayer
             using (DbConnection oConnection = new SqlConnection(sSqlConnectionString))
             using (DbCommand oCommand = oConnection.CreateCommand())
             {
-                var query = "INSERT INTO Omdb_Filmovi (Title, Year, Rated, Released, Runtime, Genre, Director, Writer, Actors, Plot, Language, Country, Awards, Poster, Metascore, imdbRating, imdbVotes, imdbID, Type, DVD, BoxOffice, Production, Website, Response, Rating) VALUES ('" + omdbMovie.Title + "', '" + omdbMovie.Year + "', '" + omdbMovie.Rated + "', '" + omdbMovie.Released + "', '" + omdbMovie.Runtime + "', '" + omdbMovie.Genre + "', '" + omdbMovie.Director + "', '" + omdbMovie.Writer + "', '" + omdbMovie.Actors + "', '" + omdbMovie.Plot + "', '" + omdbMovie.Language + "', '" + omdbMovie.Country + "', '" + omdbMovie.Awards + "', '" + omdbMovie.Poster + "', '" + omdbMovie.Metascore + "', '" + omdbMovie.imdbRating + "', '" + omdbMovie.imdbVotes + "', '" + omdbMovie.imdbID + "', '" + omdbMovie.Type + "', '" + omdbMovie.DVD + "', '" + omdbMovie.BoxOffice + "', '" + omdbMovie.Production + "', '" + omdbMovie.Website + "', '" + omdbMovie.Response + "', '5.6')";
+                var query = "INSERT INTO Omdb_Filmovi (Title, Year, Rated, Released, Runtime, Genre, Director, Writer, Actors, Plot, Language, Country, Awards, Poster, Metascore, imdbRating, imdbVotes, imdbID, Type, DVD, BoxOffice, Production, Website, Response, Rating) VALUES ('" + omdbMovie.Title + "', '" + omdbMovie.Year + "', '" + omdbMovie.Rated + "', '" + omdbMovie.Released + "', '" + omdbMovie.Runtime + "', '" + omdbMovie.Genre + "', '" + omdbMovie.Director + "', '" + omdbMovie.Writer + "', '" + omdbMovie.Actors + "', '" + omdbMovie.Plot + "', '" + omdbMovie.Language + "', '" + omdbMovie.Country + "', '" + omdbMovie.Awards + "', '" + omdbMovie.Poster + "', '" + omdbMovie.Metascore + "', '" + omdbMovie.imdbRating + "', '" + omdbMovie.imdbVotes + "', '" + omdbMovie.imdbID + "', '" + omdbMovie.Type + "', '" + omdbMovie.DVD + "', '" + omdbMovie.BoxOffice + "', '" + omdbMovie.Production + "', '" + omdbMovie.Website + "', '" + omdbMovie.Response + "', '" + rating + "')";
 
                 Console.WriteLine(query);
                 oCommand.CommandText = query;
@@ -93,58 +93,38 @@ namespace DataAccessLayer
 
         public List<Movie> GetMovies()
         {
-            List<Movie> movies = new List<Movie>();
+            var movies = new List<Movie>();
             using (DbConnection connection = new SqlConnection(connectionString))
             using (DbCommand command = connection.CreateCommand())
             {
-                command.CommandText = "SELECT * FROM [Omdb_Filmovi]";
+                command.CommandText = "SELECT Title, Year, Genre, Director FROM Omdb_Filmovi";
                 connection.Open();
                 using (DbDataReader reader = command.ExecuteReader())
                 {
                     while (reader.Read())
                     {
-                        movies.Add(new Movie
+                        movies.Add(new Movie()
                         {
-                            Id = (int)reader["Id"],
-                            Rating = (float)reader["Rating"],
                             Title = (string)reader["Title"],
                             Year = (int)reader["Year"],
-                            Rated = (string)reader["Rated"],
-                            Released = (string)reader["Released"],
-                            Runtime = (string)reader["Runtime"],
                             Genre = (string)reader["Genre"],
-                            Director = (string)reader["Director"],
-                            Writer = (string)reader["Writer"],
-                            Actors = (string)reader["Actors"],
-                            Plot = (string)reader["Plot"],
-                            Language = (string)reader["Language"],
-                            Country = (string)reader["Country"],
-                            Awards = (string)reader["Awards"],
-                            Poster = (string)reader["Poster"],
-                            Metascore = (int)reader["Metascore"],
-                            imdbRating = (string)reader["imdbRating"],
-                            imdbVotes = (float)reader["imdbVotes"],
-                            imdbID = (string)reader["imdbID"],
-                            Type = (string)reader["Type"],
-                            DVD = (string)reader["DVD"],
-                            BoxOffice = (string)reader["BoxOffice"],
-                            Production = (string)reader["Production"],
-                            Website = (string)reader["Website"],
-                            Response = (string)reader["Response"]
+                            Director = (string)reader["Director"]
                         });
                     }
                 }
             }
             return movies;
         }
-   
+        
+
+
         public void DeleteMovie(Movie movie)
         {
             string sSqlConnectionString = "Data Source=193.198.57.183; Initial Catalog = DotNet; User ID = vjezbe; Password = vjezbe";
             using (DbConnection oConnection = new SqlConnection(sSqlConnectionString))
             using (DbCommand oCommand = oConnection.CreateCommand())
             {
-                oCommand.CommandText = "DELETE FROM Omdb_Filmovi WHERE ID = " + movie.Id;
+                oCommand.CommandText = "DELETE FROM Omdb_Filmovi WHERE Id = " + movie.Id;
                 oConnection.Open();
                 using (DbDataReader reader = oCommand.ExecuteReader())
                 {
