@@ -18,41 +18,39 @@ namespace ConsoleAppTester
             var repo = new OMDBRepository();
             // Console.WriteLine("Upisi ocjenu:");
             //  string Rating = Console.ReadLine();
-
-            /*    var provjera = repo.SearchOmdbMovie(sMovie, sYear);
-
-                Console.WriteLine(provjera.Title);
-                Console.WriteLine(provjera.Year);
-                Console.WriteLine(provjera.Rated);
-                Console.WriteLine(provjera.Released);
-                Console.WriteLine(provjera.Runtime);
-                Console.WriteLine(provjera.Genre);
-                Console.WriteLine(provjera.Director);
-                Console.WriteLine(provjera.Writer);
-                Console.WriteLine(provjera.Actors);
-                Console.WriteLine(provjera.Language);
-                Console.WriteLine(provjera.Country);
-                Console.WriteLine(provjera.Awards);
-                Console.WriteLine(provjera.Poster);
-                Console.WriteLine(provjera.Metascore);
-                Console.WriteLine(provjera.imdbRating);
-                Console.WriteLine(provjera.imdbVotes);
-                Console.WriteLine(provjera.imdbID);
-                Console.WriteLine(provjera.Type);
-                Console.WriteLine(provjera.DVD);
-                Console.WriteLine(provjera.BoxOffice);
-                Console.WriteLine(provjera.Production);
-                Console.WriteLine(provjera.Website);
-                Console.WriteLine(provjera.Response);
-
-                repo.AddMovie(provjera, Rating);
-    */
-            var movies = repo.GetMovies();
-            foreach (var movie in movies)
-            {
-                Console.WriteLine(movie.Title);
-            }
+            //var provjera = repo.SearchOmdbMovie("Pretty woman", "");
+            /*
+            Console.WriteLine(provjera.Title);
+            Console.WriteLine(provjera.Year);
+            Console.WriteLine(provjera.Rated);
+            Console.WriteLine(provjera.Released);
+            Console.WriteLine(provjera.Runtime);
+            Console.WriteLine(provjera.Genre);
+            Console.WriteLine(provjera.Director);
+            Console.WriteLine(provjera.Writer);
+            Console.WriteLine(provjera.Actors);
+            Console.WriteLine(provjera.Language);
+            Console.WriteLine(provjera.Country);
+            Console.WriteLine(provjera.Awards);
+            Console.WriteLine(provjera.Poster);
+            Console.WriteLine(provjera.Metascore);
+            Console.WriteLine(provjera.imdbRating);
+            Console.WriteLine(provjera.imdbVotes);
+            Console.WriteLine(provjera.imdbID);
+            Console.WriteLine(provjera.Type);
+            Console.WriteLine(provjera.DVD);
+            Console.WriteLine(provjera.BoxOffice);
+            Console.WriteLine(provjera.Production);
+            Console.WriteLine(provjera.Website);
+            Console.WriteLine(provjera.Response);
             
+            repo.AddMovie(provjera, Rating);
+    
+            foreach(var asjkf in repo.GetThisMovie())
+            {
+                Console.WriteLine(asjkf.Title);
+            }
+            */
             //Console.WriteLine(provjera.Actors +"\n" + provjera.Country);
             Console.ReadKey();
         }

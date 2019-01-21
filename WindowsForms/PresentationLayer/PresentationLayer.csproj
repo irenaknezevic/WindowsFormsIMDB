@@ -57,10 +57,37 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormDeleteMovie.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormDeleteMovie.Designer.cs">
+      <DependentUpon>FormDeleteMovie.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormDetailedMovie.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormDetailedMovie.Designer.cs">
+      <DependentUpon>FormDetailedMovie.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormSearch.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormSearch.Designer.cs">
+      <DependentUpon>FormSearch.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormDeleteMovie.resx">
+      <DependentUpon>FormDeleteMovie.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormDetailedMovie.resx">
+      <DependentUpon>FormDetailedMovie.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormSearch.resx">
+      <DependentUpon>FormSearch.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

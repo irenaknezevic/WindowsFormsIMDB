@@ -28,25 +28,66 @@ namespace PresentationLayer
         {
             dataGridViewFilmovi.AutoGenerateColumns = false;
             dataGridViewFilmovi.DataSource = _tableBindingSource;
-            
+
+            DataGridViewImageColumn view_button = new DataGridViewImageColumn();
+            view_button.Name = "Details";
+            view_button.Image = Image.FromFile("D:/Irena/FAKS/2.godina/NET-projekt/povecalo.png");
+            view_button.Width = 20;
+            view_button.AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
+            dataGridViewFilmovi.Columns.Add(view_button);
+
             DataGridViewImageColumn delete_button = new DataGridViewImageColumn();
+            delete_button.Name = "Delete";
             delete_button.Image = Image.FromFile("D:/Irena/FAKS/2.godina/NET-projekt/delete.png");
             delete_button.Width = 20;
             delete_button.AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
             dataGridViewFilmovi.Columns.Add(delete_button);
-
-            
         }
 
-        private void textBoxPretraga_TextChanged(object sender, EventArgs e)
+        private void dataGridViewFilmovi_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            //
+            if (dataGridViewFilmovi.CurrentCell.ColumnIndex.Equals(5) && e.RowIndex != -1)
+            {
+                var id = Convert.ToInt32(dataGridViewFilmovi.Rows[e.RowIndex].Cells[0].Value.ToString());
+                var title = dataGridViewFilmovi.Rows[e.RowIndex].Cells[1].Value.ToString();
+                var year = Convert.ToInt32(dataGridViewFilmovi.Rows[e.RowIndex].Cells[2].Value.ToString());
+                var genre = dataGridViewFilmovi.Rows[e.RowIndex].Cells[3].Value.ToString();
+                var director = dataGridViewFilmovi.Rows[e.RowIndex].Cells[4].Value.ToString();
+
+                var sTitle = title + "(" + year + ")";
+                FormDetailedMovie formDetailedMovie = new FormDetailedMovie(id, sTitle);
+                formDetailedMovie.Show();
+            }
+
+            if (dataGridViewFilmovi.CurrentCell.ColumnIndex.Equals(6) && e.RowIndex != -1)
+            {
+                var id = Convert.ToInt32(dataGridViewFilmovi.Rows[e.RowIndex].Cells[0].Value.ToString());
+                var title = dataGridViewFilmovi.Rows[e.RowIndex].Cells[1].Value.ToString();
+                var year = Convert.ToInt32(dataGridViewFilmovi.Rows[e.RowIndex].Cells[2].Value.ToString());
+                var genre = dataGridViewFilmovi.Rows[e.RowIndex].Cells[3].Value.ToString();
+                var director = dataGridViewFilmovi.Rows[e.RowIndex].Cells[4].Value.ToString();
+
+                var movie = new Movie
+                {
+                    Id = id,
+                    Title = title,
+                    Year = year,
+                    Genre = genre,
+                    Director = director
+                };
+
+                FormDeleteMovie formDeleteMovie = new FormDeleteMovie(movie);
+                formDeleteMovie.Show();
+            }
+            this.Hide(); 
         }
 
         private void buttonPretraga_Click(object sender, EventArgs e)
         {
-            var film = textBoxPretraga.Text;
-
+            var movie = textBoxPretraga.Text.ToString();
+            var year = textBoxGodina.Text.ToString();
+            FormSearch newMovie = new FormSearch(movie, year);
+            newMovie.Show();
         }
     }
 }
