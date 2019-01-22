@@ -11,10 +11,10 @@ namespace ConsoleAppTester
     {
         static void Main(string[] args)
         {
-         /*   Console.WriteLine("Upisi film:");
-            string sMovie = Console.ReadLine();
-            Console.WriteLine("Upisi godinu:");
-            string sYear = Console.ReadLine();  */
+            /*   Console.WriteLine("Upisi film:");
+               string sMovie = Console.ReadLine();
+               Console.WriteLine("Upisi godinu:");
+               string sYear = Console.ReadLine();  */
             var repo = new OMDBRepository();
             // Console.WriteLine("Upisi ocjenu:");
             //  string Rating = Console.ReadLine();
@@ -45,14 +45,17 @@ namespace ConsoleAppTester
             Console.WriteLine(provjera.Response);
             
             repo.AddMovie(provjera, Rating);
-    
+            
             foreach(var asjkf in repo.GetThisMovie())
             {
                 Console.WriteLine(asjkf.Title);
             }
             */
-            //Console.WriteLine(provjera.Actors +"\n" + provjera.Country);
-            Console.ReadKey();
+            foreach (var movie in repo.GetThisMovie(15))
+            {
+                Console.WriteLine(movie.Rating);
+                Console.ReadKey();
+            }
         }
     }
 }

@@ -9,6 +9,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Data.Common;
 using System.Data.SqlClient;
+using System.Globalization;
 
 namespace DataAccessLayer
 {
@@ -77,12 +78,18 @@ namespace DataAccessLayer
         {
             string sImdbRating = omdbMovie.imdbRating.Replace(",", ".");
             string sRating = rating.Replace(",", ".");
+
+            string sWriters = omdbMovie.Plot.Replace("'", "`");
+            sWriters = sWriters.Replace("&quot", "");
+
+            string sPlot = omdbMovie.Plot.Replace("'","`");
+            sPlot = sPlot.Replace("&quot", "");
             Console.WriteLine(rating);
             string sSqlConnectionString = "Data Source=193.198.57.183; Initial Catalog = DotNet; User ID = vjezbe; Password = vjezbe";
             using (DbConnection oConnection = new SqlConnection(sSqlConnectionString))
             using (DbCommand oCommand = oConnection.CreateCommand())
             {
-                var query = "INSERT INTO Omdb_Filmovi (Title, Year, Rated, Released, Runtime, Genre, Director, Writer, Actors, Plot, Language, Country, Awards, Poster, Metascore, imdbRating, imdbVotes, imdbID, Type, DVD, BoxOffice, Production, Website, Response, Rating) VALUES ('" + omdbMovie.Title + "', '" + omdbMovie.Year + "', '" + omdbMovie.Rated + "', '" + omdbMovie.Released + "', '" + omdbMovie.Runtime + "', '" + omdbMovie.Genre + "', '" + omdbMovie.Director + "', '" + omdbMovie.Writer + "', '" + omdbMovie.Actors + "', '" + omdbMovie.Plot + "', '" + omdbMovie.Language + "', '" + omdbMovie.Country + "', '" + omdbMovie.Awards + "', '" + omdbMovie.Poster + "', '" + omdbMovie.Metascore + "', '" + sImdbRating + "', '" + omdbMovie.imdbVotes + "', '" + omdbMovie.imdbID + "', '" + omdbMovie.Type + "', '" + omdbMovie.DVD + "', '" + omdbMovie.BoxOffice + "', '" + omdbMovie.Production + "', '" + omdbMovie.Website + "', '" + omdbMovie.Response + "', '" + sRating + "')";
+                var query = "INSERT INTO Omdb_Filmovi (Title, Year, Rated, Released, Runtime, Genre, Director, Writer, Actors, Plot, Language, Country, Awards, Poster, Metascore, imdbRating, imdbVotes, imdbID, Type, DVD, BoxOffice, Production, Website, Response, Rating) VALUES ('" + omdbMovie.Title + "', '" + omdbMovie.Year + "', '" + omdbMovie.Rated + "', '" + omdbMovie.Released + "', '" + omdbMovie.Runtime + "', '" + omdbMovie.Genre + "', '" + omdbMovie.Director + "', '" + sWriters + "', '" + omdbMovie.Actors + "', '" + sPlot + "', '" + omdbMovie.Language + "', '" + omdbMovie.Country + "', '" + omdbMovie.Awards + "', '" + omdbMovie.Poster + "', '" + omdbMovie.Metascore + "', '" + sImdbRating + "', '" + omdbMovie.imdbVotes + "', '" + omdbMovie.imdbID + "', '" + omdbMovie.Type + "', '" + omdbMovie.DVD + "', '" + omdbMovie.BoxOffice + "', '" + omdbMovie.Production + "', '" + omdbMovie.Website + "', '" + omdbMovie.Response + "', '" + sRating + "')";
 
                 //Console.WriteLine(query);
                 oCommand.CommandText = query;
@@ -123,6 +130,7 @@ namespace DataAccessLayer
         public List<Movie> GetThisMovie(int id)
         {
             List<Movie> thisMovie = new List<Movie>();
+
             using (DbConnection connection = new SqlConnection(connectionString))
             using (DbCommand command = connection.CreateCommand())
             {
@@ -132,11 +140,11 @@ namespace DataAccessLayer
                 {
                     while (reader.Read())
                     {
-                        
+
                         thisMovie.Add(new Movie()
                         {
                             Id = (int)reader["Id"],
-                            Rating = float.Parse((string)reader["Rating"]),
+                            Rating = float.Parse(reader["Rating"].ToString(), CultureInfo.InvariantCulture.NumberFormat),
                             Title = (string)reader["Title"],
                             Year = (int)reader["Year"],
                             Rated = (string)reader["Rated"],

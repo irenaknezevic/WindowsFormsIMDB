@@ -58,10 +58,10 @@
             this.tabControl1.Controls.Add(this.tabPagePretraga);
             this.tabControl1.Controls.Add(this.tabPageMojiFilmovi);
             this.tabControl1.Font = new System.Drawing.Font("Lucida Sans Unicode", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.tabControl1.Location = new System.Drawing.Point(12, 12);
+            this.tabControl1.Location = new System.Drawing.Point(14, 14);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(757, 369);
+            this.tabControl1.Size = new System.Drawing.Size(854, 426);
             this.tabControl1.TabIndex = 0;
             // 
             // tabPagePretraga
@@ -76,22 +76,22 @@
             this.tabPagePretraga.Location = new System.Drawing.Point(4, 24);
             this.tabPagePretraga.Name = "tabPagePretraga";
             this.tabPagePretraga.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPagePretraga.Size = new System.Drawing.Size(749, 341);
+            this.tabPagePretraga.Size = new System.Drawing.Size(846, 398);
             this.tabPagePretraga.TabIndex = 0;
             this.tabPagePretraga.Text = "Search";
             // 
             // textBoxGodina
             // 
-            this.textBoxGodina.Location = new System.Drawing.Point(157, 195);
+            this.textBoxGodina.Location = new System.Drawing.Point(183, 225);
             this.textBoxGodina.Name = "textBoxGodina";
-            this.textBoxGodina.Size = new System.Drawing.Size(120, 24);
+            this.textBoxGodina.Size = new System.Drawing.Size(139, 24);
             this.textBoxGodina.TabIndex = 5;
             // 
             // labelGodinaFilma
             // 
             this.labelGodinaFilma.AutoSize = true;
             this.labelGodinaFilma.Font = new System.Drawing.Font("Lucida Sans Unicode", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelGodinaFilma.Location = new System.Drawing.Point(30, 195);
+            this.labelGodinaFilma.Location = new System.Drawing.Point(35, 225);
             this.labelGodinaFilma.Name = "labelGodinaFilma";
             this.labelGodinaFilma.Size = new System.Drawing.Size(50, 20);
             this.labelGodinaFilma.TabIndex = 4;
@@ -101,7 +101,7 @@
             // 
             this.labelNazivFilma.AutoSize = true;
             this.labelNazivFilma.Font = new System.Drawing.Font("Lucida Sans Unicode", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelNazivFilma.Location = new System.Drawing.Point(30, 161);
+            this.labelNazivFilma.Location = new System.Drawing.Point(35, 186);
             this.labelNazivFilma.Name = "labelNazivFilma";
             this.labelNazivFilma.Size = new System.Drawing.Size(50, 20);
             this.labelNazivFilma.TabIndex = 3;
@@ -109,9 +109,12 @@
             // 
             // label1
             // 
+            this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Lucida Sans Unicode", 30F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(171, 62);
+            this.label1.Location = new System.Drawing.Point(174, 67);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(284, 48);
             this.label1.TabIndex = 2;
@@ -120,9 +123,9 @@
             // 
             // textBoxPretraga
             // 
-            this.textBoxPretraga.Location = new System.Drawing.Point(157, 161);
+            this.textBoxPretraga.Location = new System.Drawing.Point(183, 186);
             this.textBoxPretraga.Name = "textBoxPretraga";
-            this.textBoxPretraga.Size = new System.Drawing.Size(311, 24);
+            this.textBoxPretraga.Size = new System.Drawing.Size(362, 24);
             this.textBoxPretraga.TabIndex = 1;
             // 
             // buttonPretraga
@@ -130,9 +133,9 @@
             this.buttonPretraga.AutoSize = true;
             this.buttonPretraga.BackColor = System.Drawing.Color.Teal;
             this.buttonPretraga.Font = new System.Drawing.Font("Lucida Sans Unicode", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.buttonPretraga.Location = new System.Drawing.Point(157, 241);
+            this.buttonPretraga.Location = new System.Drawing.Point(183, 309);
             this.buttonPretraga.Name = "buttonPretraga";
-            this.buttonPretraga.Size = new System.Drawing.Size(120, 30);
+            this.buttonPretraga.Size = new System.Drawing.Size(140, 35);
             this.buttonPretraga.TabIndex = 0;
             this.buttonPretraga.Text = "Search";
             this.buttonPretraga.UseVisualStyleBackColor = false;
@@ -145,15 +148,13 @@
             this.tabPageMojiFilmovi.Location = new System.Drawing.Point(4, 24);
             this.tabPageMojiFilmovi.Name = "tabPageMojiFilmovi";
             this.tabPageMojiFilmovi.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPageMojiFilmovi.Size = new System.Drawing.Size(749, 341);
+            this.tabPageMojiFilmovi.Size = new System.Drawing.Size(846, 398);
             this.tabPageMojiFilmovi.TabIndex = 1;
             this.tabPageMojiFilmovi.Text = "My movies";
             // 
             // dataGridViewFilmovi
             // 
-            this.dataGridViewFilmovi.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.dataGridViewFilmovi.AllowUserToAddRows = false;
             this.dataGridViewFilmovi.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridViewFilmovi.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridViewFilmovi.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -162,9 +163,9 @@
             this.Year,
             this.Genre,
             this.Director});
-            this.dataGridViewFilmovi.Location = new System.Drawing.Point(6, 6);
+            this.dataGridViewFilmovi.Location = new System.Drawing.Point(0, 0);
             this.dataGridViewFilmovi.Name = "dataGridViewFilmovi";
-            this.dataGridViewFilmovi.Size = new System.Drawing.Size(737, 329);
+            this.dataGridViewFilmovi.Size = new System.Drawing.Size(860, 380);
             this.dataGridViewFilmovi.TabIndex = 0;
             this.dataGridViewFilmovi.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewFilmovi_CellContentClick);
             // 
@@ -200,11 +201,14 @@
             // 
             // Form1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoSize = true;
+            this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.BackColor = System.Drawing.SystemColors.ButtonFace;
-            this.ClientSize = new System.Drawing.Size(781, 409);
+            this.ClientSize = new System.Drawing.Size(882, 472);
             this.Controls.Add(this.tabControl1);
+            this.Font = new System.Drawing.Font("Lucida Sans Unicode", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Form1";
             this.Text = "Movies";

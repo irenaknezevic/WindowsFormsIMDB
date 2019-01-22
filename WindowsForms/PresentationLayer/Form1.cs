@@ -54,9 +54,11 @@ namespace PresentationLayer
                 var genre = dataGridViewFilmovi.Rows[e.RowIndex].Cells[3].Value.ToString();
                 var director = dataGridViewFilmovi.Rows[e.RowIndex].Cells[4].Value.ToString();
 
-                var sTitle = title + "(" + year + ")";
+                var sTitle = title + " (" + year + ")";
                 FormDetailedMovie formDetailedMovie = new FormDetailedMovie(id, sTitle);
                 formDetailedMovie.Show();
+
+                this.Hide();
             }
 
             if (dataGridViewFilmovi.CurrentCell.ColumnIndex.Equals(6) && e.RowIndex != -1)
@@ -78,16 +80,19 @@ namespace PresentationLayer
 
                 FormDeleteMovie formDeleteMovie = new FormDeleteMovie(movie);
                 formDeleteMovie.Show();
+
+                this.Hide();
             }
-            this.Hide(); 
         }
 
         private void buttonPretraga_Click(object sender, EventArgs e)
         {
-            var movie = textBoxPretraga.Text.ToString();
+            var newTitle = textBoxPretraga.Text.ToString();
             var year = textBoxGodina.Text.ToString();
-            FormSearch newMovie = new FormSearch(movie, year);
+            FormSearch newMovie = new FormSearch(newTitle, year);
             newMovie.Show();
+            //this.Close();
+            this.Hide();
         }
     }
 }
