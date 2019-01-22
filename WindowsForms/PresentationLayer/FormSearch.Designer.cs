@@ -599,13 +599,14 @@
             this.buttonAdd.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.buttonAdd.BackColor = System.Drawing.Color.Green;
             this.buttonAdd.Font = new System.Drawing.Font("Modern No. 20", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonAdd.Location = new System.Drawing.Point(664, 493);
+            this.buttonAdd.Location = new System.Drawing.Point(651, 490);
             this.buttonAdd.Name = "buttonAdd";
-            this.buttonAdd.Size = new System.Drawing.Size(120, 30);
+            this.buttonAdd.Size = new System.Drawing.Size(120, 40);
             this.buttonAdd.TabIndex = 25;
             this.buttonAdd.Text = "Add movie";
-            this.buttonAdd.UseVisualStyleBackColor = true;
+            this.buttonAdd.UseVisualStyleBackColor = false;
             this.buttonAdd.Click += new System.EventHandler(this.buttonAdd_Click);
             // 
             // textBoxYourRating
@@ -628,13 +629,14 @@
             // 
             // buttonClose
             // 
+            this.buttonClose.BackColor = System.Drawing.Color.Red;
             this.buttonClose.Font = new System.Drawing.Font("Modern No. 20", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonClose.Location = new System.Drawing.Point(797, 493);
+            this.buttonClose.Location = new System.Drawing.Point(777, 490);
             this.buttonClose.Name = "buttonClose";
-            this.buttonClose.Size = new System.Drawing.Size(120, 30);
+            this.buttonClose.Size = new System.Drawing.Size(120, 40);
             this.buttonClose.TabIndex = 28;
             this.buttonClose.Text = "Close";
-            this.buttonClose.UseVisualStyleBackColor = true;
+            this.buttonClose.UseVisualStyleBackColor = false;
             this.buttonClose.Click += new System.EventHandler(this.buttonClose_Click);
             // 
             // FormSearch

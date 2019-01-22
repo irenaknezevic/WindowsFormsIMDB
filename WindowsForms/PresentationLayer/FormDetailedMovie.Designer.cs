@@ -616,13 +616,14 @@
             // 
             // buttonCloseDetails
             // 
+            this.buttonCloseDetails.BackColor = System.Drawing.Color.Red;
             this.buttonCloseDetails.Font = new System.Drawing.Font("Modern No. 20", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonCloseDetails.Location = new System.Drawing.Point(776, 493);
+            this.buttonCloseDetails.Location = new System.Drawing.Point(776, 489);
             this.buttonCloseDetails.Name = "buttonCloseDetails";
-            this.buttonCloseDetails.Size = new System.Drawing.Size(120, 30);
+            this.buttonCloseDetails.Size = new System.Drawing.Size(120, 40);
             this.buttonCloseDetails.TabIndex = 24;
             this.buttonCloseDetails.Text = "Close";
-            this.buttonCloseDetails.UseVisualStyleBackColor = true;
+            this.buttonCloseDetails.UseVisualStyleBackColor = false;
             this.buttonCloseDetails.Click += new System.EventHandler(this.buttonCloseDetails_Click);
             // 
             // FormDetailedMovie

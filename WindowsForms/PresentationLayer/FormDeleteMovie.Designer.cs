@@ -36,7 +36,7 @@
             // 
             // buttonObrisi
             // 
-            this.buttonObrisi.BackColor = System.Drawing.SystemColors.ControlDark;
+            this.buttonObrisi.BackColor = System.Drawing.Color.Green;
             this.buttonObrisi.Font = new System.Drawing.Font("Lucida Sans Unicode", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.buttonObrisi.Location = new System.Drawing.Point(125, 150);
             this.buttonObrisi.Name = "buttonObrisi";
@@ -50,7 +50,7 @@
             // 
             this.buttonOdustani.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.buttonOdustani.BackColor = System.Drawing.SystemColors.ControlDark;
+            this.buttonOdustani.BackColor = System.Drawing.Color.Red;
             this.buttonOdustani.Font = new System.Drawing.Font("Lucida Sans Unicode", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.buttonOdustani.Location = new System.Drawing.Point(332, 150);
             this.buttonOdustani.Name = "buttonOdustani";
