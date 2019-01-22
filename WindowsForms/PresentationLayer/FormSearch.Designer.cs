@@ -648,6 +648,7 @@
             this.Controls.Add(this.buttonAdd);
             this.Controls.Add(this.panel1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MaximizeBox = false;
             this.Name = "FormSearch";
             this.Text = "New movie";
             this.Load += new System.EventHandler(this.FormSearch_Load);

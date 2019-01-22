@@ -210,6 +210,7 @@
             this.Controls.Add(this.tabControl1);
             this.Font = new System.Drawing.Font("Lucida Sans Unicode", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MaximizeBox = false;
             this.Name = "Form1";
             this.Text = "Movies";
             this.Load += new System.EventHandler(this.Form1_Load);
