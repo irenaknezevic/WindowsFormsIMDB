@@ -82,7 +82,7 @@
             // 
             // textBoxGodina
             // 
-            this.textBoxGodina.Location = new System.Drawing.Point(183, 225);
+            this.textBoxGodina.Location = new System.Drawing.Point(269, 225);
             this.textBoxGodina.Name = "textBoxGodina";
             this.textBoxGodina.Size = new System.Drawing.Size(139, 24);
             this.textBoxGodina.TabIndex = 5;
@@ -91,7 +91,7 @@
             // 
             this.labelGodinaFilma.AutoSize = true;
             this.labelGodinaFilma.Font = new System.Drawing.Font("Lucida Sans Unicode", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelGodinaFilma.Location = new System.Drawing.Point(35, 225);
+            this.labelGodinaFilma.Location = new System.Drawing.Point(132, 229);
             this.labelGodinaFilma.Name = "labelGodinaFilma";
             this.labelGodinaFilma.Size = new System.Drawing.Size(50, 20);
             this.labelGodinaFilma.TabIndex = 4;
@@ -101,7 +101,7 @@
             // 
             this.labelNazivFilma.AutoSize = true;
             this.labelNazivFilma.Font = new System.Drawing.Font("Lucida Sans Unicode", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelNazivFilma.Location = new System.Drawing.Point(35, 186);
+            this.labelNazivFilma.Location = new System.Drawing.Point(132, 186);
             this.labelNazivFilma.Name = "labelNazivFilma";
             this.labelNazivFilma.Size = new System.Drawing.Size(50, 20);
             this.labelNazivFilma.TabIndex = 3;
@@ -114,7 +114,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Lucida Sans Unicode", 30F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(174, 67);
+            this.label1.Location = new System.Drawing.Point(261, 71);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(284, 48);
             this.label1.TabIndex = 2;
@@ -123,7 +123,7 @@
             // 
             // textBoxPretraga
             // 
-            this.textBoxPretraga.Location = new System.Drawing.Point(183, 186);
+            this.textBoxPretraga.Location = new System.Drawing.Point(269, 182);
             this.textBoxPretraga.Name = "textBoxPretraga";
             this.textBoxPretraga.Size = new System.Drawing.Size(362, 24);
             this.textBoxPretraga.TabIndex = 1;
@@ -133,7 +133,7 @@
             this.buttonPretraga.AutoSize = true;
             this.buttonPretraga.BackColor = System.Drawing.Color.Teal;
             this.buttonPretraga.Font = new System.Drawing.Font("Lucida Sans Unicode", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.buttonPretraga.Location = new System.Drawing.Point(183, 309);
+            this.buttonPretraga.Location = new System.Drawing.Point(269, 302);
             this.buttonPretraga.Name = "buttonPretraga";
             this.buttonPretraga.Size = new System.Drawing.Size(140, 35);
             this.buttonPretraga.TabIndex = 0;
