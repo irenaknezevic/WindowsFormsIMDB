@@ -63,8 +63,12 @@ namespace PresentationLayer
             lblimdbVotesNew.Text = Convert.ToString(omdbNewMovie.imdbVotes);
             lblimdbIDNew.Text = omdbNewMovie.imdbID;
             lblResponseNew.Text = omdbNewMovie.Response;
-            linkLabelNew.Text = omdbNewMovie.Website;
             
+            if (omdbNewMovie.Website != "N/A")
+            {
+                webBrowser.Url = new Uri(omdbNewMovie.Website);
+            }
+
         }
 
         private void buttonAdd_Click(object sender, EventArgs e)
@@ -86,14 +90,6 @@ namespace PresentationLayer
 
             Form1 Update = new Form1();
             Update.Show();
-        }
-
-        private void linkLabelNew_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
-        {
-            if(linkLabelNew.Text != "N/A")
-            {
-                Process.Start(linkLabelNew.Text);
-            }
         }
     }
 }

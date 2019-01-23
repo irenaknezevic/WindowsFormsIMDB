@@ -44,10 +44,12 @@
             this.Year = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Genre = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Director = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.tabControl1.SuspendLayout();
             this.tabPagePretraga.SuspendLayout();
             this.tabPageMojiFilmovi.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewFilmovi)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // tabControl1
@@ -66,7 +68,8 @@
             // 
             // tabPagePretraga
             // 
-            this.tabPagePretraga.BackColor = System.Drawing.Color.White;
+            this.tabPagePretraga.BackColor = System.Drawing.Color.LightGray;
+            this.tabPagePretraga.Controls.Add(this.pictureBox1);
             this.tabPagePretraga.Controls.Add(this.textBoxGodina);
             this.tabPagePretraga.Controls.Add(this.labelGodinaFilma);
             this.tabPagePretraga.Controls.Add(this.labelNazivFilma);
@@ -82,7 +85,7 @@
             // 
             // textBoxGodina
             // 
-            this.textBoxGodina.Location = new System.Drawing.Point(269, 225);
+            this.textBoxGodina.Location = new System.Drawing.Point(269, 291);
             this.textBoxGodina.Name = "textBoxGodina";
             this.textBoxGodina.Size = new System.Drawing.Size(139, 24);
             this.textBoxGodina.TabIndex = 5;
@@ -90,20 +93,20 @@
             // labelGodinaFilma
             // 
             this.labelGodinaFilma.AutoSize = true;
-            this.labelGodinaFilma.Font = new System.Drawing.Font("Lucida Sans Unicode", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelGodinaFilma.Location = new System.Drawing.Point(132, 229);
+            this.labelGodinaFilma.Font = new System.Drawing.Font("Lucida Sans Unicode", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.labelGodinaFilma.Location = new System.Drawing.Point(132, 295);
             this.labelGodinaFilma.Name = "labelGodinaFilma";
-            this.labelGodinaFilma.Size = new System.Drawing.Size(50, 20);
+            this.labelGodinaFilma.Size = new System.Drawing.Size(55, 20);
             this.labelGodinaFilma.TabIndex = 4;
             this.labelGodinaFilma.Text = "Year:";
             // 
             // labelNazivFilma
             // 
             this.labelNazivFilma.AutoSize = true;
-            this.labelNazivFilma.Font = new System.Drawing.Font("Lucida Sans Unicode", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelNazivFilma.Location = new System.Drawing.Point(132, 186);
+            this.labelNazivFilma.Font = new System.Drawing.Font("Lucida Sans Unicode", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.labelNazivFilma.Location = new System.Drawing.Point(131, 237);
             this.labelNazivFilma.Name = "labelNazivFilma";
-            this.labelNazivFilma.Size = new System.Drawing.Size(50, 20);
+            this.labelNazivFilma.Size = new System.Drawing.Size(56, 20);
             this.labelNazivFilma.TabIndex = 3;
             this.labelNazivFilma.Text = "Title:";
             // 
@@ -114,16 +117,16 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Lucida Sans Unicode", 30F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(261, 71);
+            this.label1.Location = new System.Drawing.Point(261, 107);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(284, 48);
+            this.label1.Size = new System.Drawing.Size(326, 48);
             this.label1.TabIndex = 2;
-            this.label1.Text = "Movie search";
+            this.label1.Text = "Movie search...";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // textBoxPretraga
             // 
-            this.textBoxPretraga.Location = new System.Drawing.Point(269, 182);
+            this.textBoxPretraga.Location = new System.Drawing.Point(269, 233);
             this.textBoxPretraga.Name = "textBoxPretraga";
             this.textBoxPretraga.Size = new System.Drawing.Size(362, 24);
             this.textBoxPretraga.TabIndex = 1;
@@ -133,7 +136,7 @@
             this.buttonPretraga.AutoSize = true;
             this.buttonPretraga.BackColor = System.Drawing.Color.Teal;
             this.buttonPretraga.Font = new System.Drawing.Font("Lucida Sans Unicode", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.buttonPretraga.Location = new System.Drawing.Point(269, 302);
+            this.buttonPretraga.Location = new System.Drawing.Point(686, 343);
             this.buttonPretraga.Name = "buttonPretraga";
             this.buttonPretraga.Size = new System.Drawing.Size(140, 35);
             this.buttonPretraga.TabIndex = 0;
@@ -199,13 +202,24 @@
             this.Director.HeaderText = "Director";
             this.Director.Name = "Director";
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.ImageLocation = "C:\\Users\\Lenovo\\Desktop\\images.jpg";
+            this.pictureBox1.InitialImage = ((System.Drawing.Image)(resources.GetObject("pictureBox1.InitialImage")));
+            this.pictureBox1.Location = new System.Drawing.Point(82, 76);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(150, 112);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 6;
+            this.pictureBox1.TabStop = false;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.BackColor = System.Drawing.SystemColors.Menu;
             this.ClientSize = new System.Drawing.Size(882, 472);
             this.Controls.Add(this.tabControl1);
             this.Font = new System.Drawing.Font("Lucida Sans Unicode", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
@@ -219,6 +233,7 @@
             this.tabPagePretraga.PerformLayout();
             this.tabPageMojiFilmovi.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewFilmovi)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -240,6 +255,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Year;
         private System.Windows.Forms.DataGridViewTextBoxColumn Genre;
         private System.Windows.Forms.DataGridViewTextBoxColumn Director;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }
 

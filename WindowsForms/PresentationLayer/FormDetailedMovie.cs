@@ -63,15 +63,11 @@ namespace PresentationLayer
                 lblimdbID.Text = movie.imdbID;
                 lblResponse.Text = movie.Response;
                 lblMyRating.Text = Convert.ToString(movie.Rating);
-                linkLabel.Text = movie.Website;
-            }
-        }
 
-        private void linkLabel_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
-        {
-            if (linkLabel.Text != "N/A")
-            {
-                Process.Start(linkLabel.Text);
+                if(movie.Website != "N/A")
+                {
+                    webBrowser1.Url = new Uri(movie.Website);
+                }
             }
         }
 
