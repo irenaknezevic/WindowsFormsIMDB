@@ -30,41 +30,46 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormDetailedMovie));
             this.panel1 = new System.Windows.Forms.Panel();
+            this.tabControl1 = new System.Windows.Forms.TabControl();
+            this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.label4 = new System.Windows.Forms.Label();
             this.labelGenre2 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
             this.label22 = new System.Windows.Forms.Label();
-            this.label21 = new System.Windows.Forms.Label();
-            this.label20 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
             this.lblMyRating = new System.Windows.Forms.Label();
+            this.label14 = new System.Windows.Forms.Label();
             this.lblResponse = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
             this.lblimdbID = new System.Windows.Forms.Label();
+            this.label15 = new System.Windows.Forms.Label();
             this.lblimdbVotes = new System.Windows.Forms.Label();
+            this.label10 = new System.Windows.Forms.Label();
             this.lblimdbRating = new System.Windows.Forms.Label();
+            this.label16 = new System.Windows.Forms.Label();
             this.lblMetascore = new System.Windows.Forms.Label();
+            this.label11 = new System.Windows.Forms.Label();
             this.lblDVD = new System.Windows.Forms.Label();
+            this.label17 = new System.Windows.Forms.Label();
             this.lblType = new System.Windows.Forms.Label();
+            this.label12 = new System.Windows.Forms.Label();
             this.lblProduction = new System.Windows.Forms.Label();
+            this.label18 = new System.Windows.Forms.Label();
             this.lblBoxOffice = new System.Windows.Forms.Label();
+            this.label13 = new System.Windows.Forms.Label();
             this.lblAwards = new System.Windows.Forms.Label();
+            this.label19 = new System.Windows.Forms.Label();
             this.lblLanguage = new System.Windows.Forms.Label();
+            this.lblReleased = new System.Windows.Forms.Label();
             this.lblCountry = new System.Windows.Forms.Label();
             this.lblRuntime2 = new System.Windows.Forms.Label();
-            this.lblReleased = new System.Windows.Forms.Label();
-            this.label19 = new System.Windows.Forms.Label();
-            this.label13 = new System.Windows.Forms.Label();
-            this.label18 = new System.Windows.Forms.Label();
-            this.label12 = new System.Windows.Forms.Label();
-            this.label17 = new System.Windows.Forms.Label();
-            this.label11 = new System.Windows.Forms.Label();
-            this.label16 = new System.Windows.Forms.Label();
-            this.label10 = new System.Windows.Forms.Label();
-            this.label15 = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
-            this.label14 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
+            this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.webBrowser1 = new System.Windows.Forms.WebBrowser();
+            this.label21 = new System.Windows.Forms.Label();
+            this.label20 = new System.Windows.Forms.Label();
             this.lblPlot = new System.Windows.Forms.Label();
             this.pictureBox = new System.Windows.Forms.PictureBox();
             this.lblActors = new System.Windows.Forms.Label();
@@ -78,17 +83,12 @@
             this.lblGenre = new System.Windows.Forms.Label();
             this.lblTitle = new System.Windows.Forms.Label();
             this.buttonCloseDetails = new System.Windows.Forms.Button();
-            this.tabControl1 = new System.Windows.Forms.TabControl();
-            this.tabPage1 = new System.Windows.Forms.TabPage();
-            this.tabPage2 = new System.Windows.Forms.TabPage();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.webBrowser1 = new System.Windows.Forms.WebBrowser();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox)).BeginInit();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
-            this.tabPage2.SuspendLayout();
             this.panel2.SuspendLayout();
+            this.tabPage2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -114,6 +114,80 @@
             this.panel1.Size = new System.Drawing.Size(1013, 600);
             this.panel1.TabIndex = 23;
             // 
+            // tabControl1
+            // 
+            this.tabControl1.Controls.Add(this.tabPage1);
+            this.tabControl1.Controls.Add(this.tabPage2);
+            this.tabControl1.Font = new System.Drawing.Font("Modern No. 20", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tabControl1.Location = new System.Drawing.Point(3, 567);
+            this.tabControl1.Name = "tabControl1";
+            this.tabControl1.SelectedIndex = 0;
+            this.tabControl1.Size = new System.Drawing.Size(990, 385);
+            this.tabControl1.TabIndex = 53;
+            // 
+            // tabPage1
+            // 
+            this.tabPage1.BackColor = System.Drawing.Color.White;
+            this.tabPage1.Controls.Add(this.panel2);
+            this.tabPage1.Location = new System.Drawing.Point(4, 26);
+            this.tabPage1.Name = "tabPage1";
+            this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage1.Size = new System.Drawing.Size(982, 355);
+            this.tabPage1.TabIndex = 0;
+            this.tabPage1.Text = "Details";
+            // 
+            // panel2
+            // 
+            this.panel2.AutoScroll = true;
+            this.panel2.BackColor = System.Drawing.Color.Gainsboro;
+            this.panel2.Controls.Add(this.label4);
+            this.panel2.Controls.Add(this.labelGenre2);
+            this.panel2.Controls.Add(this.label5);
+            this.panel2.Controls.Add(this.label22);
+            this.panel2.Controls.Add(this.label6);
+            this.panel2.Controls.Add(this.label7);
+            this.panel2.Controls.Add(this.label8);
+            this.panel2.Controls.Add(this.lblMyRating);
+            this.panel2.Controls.Add(this.label14);
+            this.panel2.Controls.Add(this.lblResponse);
+            this.panel2.Controls.Add(this.label9);
+            this.panel2.Controls.Add(this.lblimdbID);
+            this.panel2.Controls.Add(this.label15);
+            this.panel2.Controls.Add(this.lblimdbVotes);
+            this.panel2.Controls.Add(this.label10);
+            this.panel2.Controls.Add(this.lblimdbRating);
+            this.panel2.Controls.Add(this.label16);
+            this.panel2.Controls.Add(this.lblMetascore);
+            this.panel2.Controls.Add(this.label11);
+            this.panel2.Controls.Add(this.lblDVD);
+            this.panel2.Controls.Add(this.label17);
+            this.panel2.Controls.Add(this.lblType);
+            this.panel2.Controls.Add(this.label12);
+            this.panel2.Controls.Add(this.lblProduction);
+            this.panel2.Controls.Add(this.label18);
+            this.panel2.Controls.Add(this.lblBoxOffice);
+            this.panel2.Controls.Add(this.label13);
+            this.panel2.Controls.Add(this.lblAwards);
+            this.panel2.Controls.Add(this.label19);
+            this.panel2.Controls.Add(this.lblLanguage);
+            this.panel2.Controls.Add(this.lblReleased);
+            this.panel2.Controls.Add(this.lblCountry);
+            this.panel2.Controls.Add(this.lblRuntime2);
+            this.panel2.Location = new System.Drawing.Point(6, 6);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(970, 343);
+            this.panel2.TabIndex = 0;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Modern No. 20", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(14, 17);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(78, 21);
+            this.label4.TabIndex = 23;
+            this.label4.Text = "Details:";
+            // 
             // labelGenre2
             // 
             this.labelGenre2.AutoSize = true;
@@ -123,6 +197,16 @@
             this.labelGenre2.Size = new System.Drawing.Size(53, 18);
             this.labelGenre2.TabIndex = 52;
             this.labelGenre2.Text = "label23";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Modern No. 20", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(15, 50);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(67, 18);
+            this.label5.TabIndex = 24;
+            this.label5.Text = "Released:";
             // 
             // label22
             // 
@@ -134,23 +218,35 @@
             this.label22.TabIndex = 51;
             this.label22.Text = "Genre:";
             // 
-            // label21
+            // label6
             // 
-            this.label21.AutoSize = true;
-            this.label21.Location = new System.Drawing.Point(524, 68);
-            this.label21.Name = "label21";
-            this.label21.Size = new System.Drawing.Size(9, 13);
-            this.label21.TabIndex = 50;
-            this.label21.Text = "|";
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Modern No. 20", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Location = new System.Drawing.Point(16, 72);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(68, 18);
+            this.label6.TabIndex = 25;
+            this.label6.Text = "Runtime:";
             // 
-            // label20
+            // label7
             // 
-            this.label20.AutoSize = true;
-            this.label20.Location = new System.Drawing.Point(440, 68);
-            this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(9, 13);
-            this.label20.TabIndex = 49;
-            this.label20.Text = "|";
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Modern No. 20", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Location = new System.Drawing.Point(15, 121);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(63, 18);
+            this.label7.TabIndex = 26;
+            this.label7.Text = "Country:";
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Modern No. 20", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.Location = new System.Drawing.Point(16, 146);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(67, 18);
+            this.label8.TabIndex = 27;
+            this.label8.Text = "Lanuage:";
             // 
             // lblMyRating
             // 
@@ -162,6 +258,16 @@
             this.lblMyRating.TabIndex = 48;
             this.lblMyRating.Text = "label34";
             // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Font = new System.Drawing.Font("Modern No. 20", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label14.Location = new System.Drawing.Point(15, 293);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(75, 18);
+            this.label14.TabIndex = 24;
+            this.label14.Text = "Metascore:";
+            // 
             // lblResponse
             // 
             this.lblResponse.AutoSize = true;
@@ -171,6 +277,16 @@
             this.lblResponse.Size = new System.Drawing.Size(53, 18);
             this.lblResponse.TabIndex = 47;
             this.lblResponse.Text = "label33";
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Modern No. 20", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.Location = new System.Drawing.Point(15, 170);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(60, 18);
+            this.label9.TabIndex = 28;
+            this.label9.Text = "Awards:";
             // 
             // lblimdbID
             // 
@@ -182,6 +298,16 @@
             this.lblimdbID.TabIndex = 46;
             this.lblimdbID.Text = "label32";
             // 
+            // label15
+            // 
+            this.label15.AutoSize = true;
+            this.label15.Font = new System.Drawing.Font("Modern No. 20", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label15.Location = new System.Drawing.Point(15, 321);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(89, 18);
+            this.label15.TabIndex = 25;
+            this.label15.Text = "imdbRating:";
+            // 
             // lblimdbVotes
             // 
             this.lblimdbVotes.AutoSize = true;
@@ -191,6 +317,16 @@
             this.lblimdbVotes.Size = new System.Drawing.Size(53, 18);
             this.lblimdbVotes.TabIndex = 45;
             this.lblimdbVotes.Text = "label31";
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Font = new System.Drawing.Font("Modern No. 20", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.Location = new System.Drawing.Point(15, 194);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(82, 18);
+            this.label10.TabIndex = 29;
+            this.label10.Text = "Box Office:";
             // 
             // lblimdbRating
             // 
@@ -202,6 +338,16 @@
             this.lblimdbRating.TabIndex = 44;
             this.lblimdbRating.Text = "label30";
             // 
+            // label16
+            // 
+            this.label16.AutoSize = true;
+            this.label16.Font = new System.Drawing.Font("Modern No. 20", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label16.Location = new System.Drawing.Point(15, 350);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(80, 18);
+            this.label16.TabIndex = 26;
+            this.label16.Text = "imdbVotes:";
+            // 
             // lblMetascore
             // 
             this.lblMetascore.AutoSize = true;
@@ -211,6 +357,16 @@
             this.lblMetascore.Size = new System.Drawing.Size(53, 18);
             this.lblMetascore.TabIndex = 43;
             this.lblMetascore.Text = "label29";
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Font = new System.Drawing.Font("Modern No. 20", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.Location = new System.Drawing.Point(15, 219);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(83, 18);
+            this.label11.TabIndex = 30;
+            this.label11.Text = "Production:";
             // 
             // lblDVD
             // 
@@ -222,6 +378,16 @@
             this.lblDVD.TabIndex = 42;
             this.lblDVD.Text = "label28";
             // 
+            // label17
+            // 
+            this.label17.AutoSize = true;
+            this.label17.Font = new System.Drawing.Font("Modern No. 20", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label17.Location = new System.Drawing.Point(15, 374);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(64, 18);
+            this.label17.TabIndex = 27;
+            this.label17.Text = "imdbID:";
+            // 
             // lblType
             // 
             this.lblType.AutoSize = true;
@@ -231,6 +397,16 @@
             this.lblType.Size = new System.Drawing.Size(53, 18);
             this.lblType.TabIndex = 41;
             this.lblType.Text = "label27";
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Font = new System.Drawing.Font("Modern No. 20", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label12.Location = new System.Drawing.Point(15, 268);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(47, 18);
+            this.label12.TabIndex = 31;
+            this.label12.Text = "DVD:";
             // 
             // lblProduction
             // 
@@ -242,6 +418,16 @@
             this.lblProduction.TabIndex = 40;
             this.lblProduction.Text = "label26";
             // 
+            // label18
+            // 
+            this.label18.AutoSize = true;
+            this.label18.Font = new System.Drawing.Font("Modern No. 20", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label18.Location = new System.Drawing.Point(15, 399);
+            this.label18.Name = "label18";
+            this.label18.Size = new System.Drawing.Size(71, 18);
+            this.label18.TabIndex = 28;
+            this.label18.Text = "Response:";
+            // 
             // lblBoxOffice
             // 
             this.lblBoxOffice.AutoSize = true;
@@ -251,6 +437,16 @@
             this.lblBoxOffice.Size = new System.Drawing.Size(53, 18);
             this.lblBoxOffice.TabIndex = 39;
             this.lblBoxOffice.Text = "label25";
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Font = new System.Drawing.Font("Modern No. 20", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label13.Location = new System.Drawing.Point(15, 243);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(43, 18);
+            this.label13.TabIndex = 32;
+            this.label13.Text = "Type:";
             // 
             // lblAwards
             // 
@@ -262,6 +458,16 @@
             this.lblAwards.TabIndex = 38;
             this.lblAwards.Text = "label24";
             // 
+            // label19
+            // 
+            this.label19.AutoSize = true;
+            this.label19.Font = new System.Drawing.Font("Modern No. 20", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label19.Location = new System.Drawing.Point(15, 424);
+            this.label19.Name = "label19";
+            this.label19.Size = new System.Drawing.Size(77, 18);
+            this.label19.TabIndex = 29;
+            this.label19.Text = "My rating:";
+            // 
             // lblLanguage
             // 
             this.lblLanguage.AutoSize = true;
@@ -271,6 +477,16 @@
             this.lblLanguage.Size = new System.Drawing.Size(53, 18);
             this.lblLanguage.TabIndex = 37;
             this.lblLanguage.Text = "label23";
+            // 
+            // lblReleased
+            // 
+            this.lblReleased.AutoSize = true;
+            this.lblReleased.Font = new System.Drawing.Font("Modern No. 20", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblReleased.Location = new System.Drawing.Point(138, 50);
+            this.lblReleased.Name = "lblReleased";
+            this.lblReleased.Size = new System.Drawing.Size(53, 18);
+            this.lblReleased.TabIndex = 34;
+            this.lblReleased.Text = "label20";
             // 
             // lblCountry
             // 
@@ -292,175 +508,43 @@
             this.lblRuntime2.TabIndex = 35;
             this.lblRuntime2.Text = "label21";
             // 
-            // lblReleased
+            // tabPage2
             // 
-            this.lblReleased.AutoSize = true;
-            this.lblReleased.Font = new System.Drawing.Font("Modern No. 20", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblReleased.Location = new System.Drawing.Point(138, 50);
-            this.lblReleased.Name = "lblReleased";
-            this.lblReleased.Size = new System.Drawing.Size(53, 18);
-            this.lblReleased.TabIndex = 34;
-            this.lblReleased.Text = "label20";
+            this.tabPage2.BackColor = System.Drawing.Color.White;
+            this.tabPage2.Controls.Add(this.webBrowser1);
+            this.tabPage2.Location = new System.Drawing.Point(4, 26);
+            this.tabPage2.Name = "tabPage2";
+            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage2.Size = new System.Drawing.Size(982, 355);
+            this.tabPage2.TabIndex = 1;
+            this.tabPage2.Text = "Website";
             // 
-            // label19
+            // webBrowser1
             // 
-            this.label19.AutoSize = true;
-            this.label19.Font = new System.Drawing.Font("Modern No. 20", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label19.Location = new System.Drawing.Point(15, 424);
-            this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(77, 18);
-            this.label19.TabIndex = 29;
-            this.label19.Text = "My rating:";
+            this.webBrowser1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.webBrowser1.Location = new System.Drawing.Point(3, 3);
+            this.webBrowser1.MinimumSize = new System.Drawing.Size(20, 20);
+            this.webBrowser1.Name = "webBrowser1";
+            this.webBrowser1.Size = new System.Drawing.Size(976, 349);
+            this.webBrowser1.TabIndex = 0;
             // 
-            // label13
+            // label21
             // 
-            this.label13.AutoSize = true;
-            this.label13.Font = new System.Drawing.Font("Modern No. 20", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label13.Location = new System.Drawing.Point(15, 243);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(43, 18);
-            this.label13.TabIndex = 32;
-            this.label13.Text = "Type:";
+            this.label21.AutoSize = true;
+            this.label21.Location = new System.Drawing.Point(524, 68);
+            this.label21.Name = "label21";
+            this.label21.Size = new System.Drawing.Size(9, 13);
+            this.label21.TabIndex = 50;
+            this.label21.Text = "|";
             // 
-            // label18
+            // label20
             // 
-            this.label18.AutoSize = true;
-            this.label18.Font = new System.Drawing.Font("Modern No. 20", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label18.Location = new System.Drawing.Point(15, 399);
-            this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(71, 18);
-            this.label18.TabIndex = 28;
-            this.label18.Text = "Response:";
-            // 
-            // label12
-            // 
-            this.label12.AutoSize = true;
-            this.label12.Font = new System.Drawing.Font("Modern No. 20", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.Location = new System.Drawing.Point(15, 268);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(47, 18);
-            this.label12.TabIndex = 31;
-            this.label12.Text = "DVD:";
-            // 
-            // label17
-            // 
-            this.label17.AutoSize = true;
-            this.label17.Font = new System.Drawing.Font("Modern No. 20", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label17.Location = new System.Drawing.Point(15, 374);
-            this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(64, 18);
-            this.label17.TabIndex = 27;
-            this.label17.Text = "imdbID:";
-            // 
-            // label11
-            // 
-            this.label11.AutoSize = true;
-            this.label11.Font = new System.Drawing.Font("Modern No. 20", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.Location = new System.Drawing.Point(15, 219);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(83, 18);
-            this.label11.TabIndex = 30;
-            this.label11.Text = "Production:";
-            // 
-            // label16
-            // 
-            this.label16.AutoSize = true;
-            this.label16.Font = new System.Drawing.Font("Modern No. 20", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label16.Location = new System.Drawing.Point(15, 350);
-            this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(80, 18);
-            this.label16.TabIndex = 26;
-            this.label16.Text = "imdbVotes:";
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("Modern No. 20", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(15, 194);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(82, 18);
-            this.label10.TabIndex = 29;
-            this.label10.Text = "Box Office:";
-            // 
-            // label15
-            // 
-            this.label15.AutoSize = true;
-            this.label15.Font = new System.Drawing.Font("Modern No. 20", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label15.Location = new System.Drawing.Point(15, 321);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(89, 18);
-            this.label15.TabIndex = 25;
-            this.label15.Text = "imdbRating:";
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Modern No. 20", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(15, 170);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(60, 18);
-            this.label9.TabIndex = 28;
-            this.label9.Text = "Awards:";
-            // 
-            // label14
-            // 
-            this.label14.AutoSize = true;
-            this.label14.Font = new System.Drawing.Font("Modern No. 20", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label14.Location = new System.Drawing.Point(15, 293);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(75, 18);
-            this.label14.TabIndex = 24;
-            this.label14.Text = "Metascore:";
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Modern No. 20", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(16, 146);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(67, 18);
-            this.label8.TabIndex = 27;
-            this.label8.Text = "Lanuage:";
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Modern No. 20", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(15, 121);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(63, 18);
-            this.label7.TabIndex = 26;
-            this.label7.Text = "Country:";
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Modern No. 20", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(16, 72);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(68, 18);
-            this.label6.TabIndex = 25;
-            this.label6.Text = "Runtime:";
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Modern No. 20", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(15, 50);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(67, 18);
-            this.label5.TabIndex = 24;
-            this.label5.Text = "Released:";
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Modern No. 20", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(14, 17);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(78, 21);
-            this.label4.TabIndex = 23;
-            this.label4.Text = "Details:";
+            this.label20.AutoSize = true;
+            this.label20.Location = new System.Drawing.Point(440, 68);
+            this.label20.Name = "label20";
+            this.label20.Size = new System.Drawing.Size(9, 13);
+            this.label20.TabIndex = 49;
+            this.label20.Text = "|";
             // 
             // lblPlot
             // 
@@ -590,90 +674,6 @@
             this.buttonCloseDetails.UseVisualStyleBackColor = false;
             this.buttonCloseDetails.Click += new System.EventHandler(this.buttonCloseDetails_Click);
             // 
-            // tabControl1
-            // 
-            this.tabControl1.Controls.Add(this.tabPage1);
-            this.tabControl1.Controls.Add(this.tabPage2);
-            this.tabControl1.Font = new System.Drawing.Font("Modern No. 20", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tabControl1.Location = new System.Drawing.Point(3, 567);
-            this.tabControl1.Name = "tabControl1";
-            this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(990, 385);
-            this.tabControl1.TabIndex = 53;
-            // 
-            // tabPage1
-            // 
-            this.tabPage1.BackColor = System.Drawing.Color.White;
-            this.tabPage1.Controls.Add(this.panel2);
-            this.tabPage1.Location = new System.Drawing.Point(4, 26);
-            this.tabPage1.Name = "tabPage1";
-            this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(982, 355);
-            this.tabPage1.TabIndex = 0;
-            this.tabPage1.Text = "Details";
-            // 
-            // tabPage2
-            // 
-            this.tabPage2.BackColor = System.Drawing.Color.White;
-            this.tabPage2.Controls.Add(this.webBrowser1);
-            this.tabPage2.Location = new System.Drawing.Point(4, 26);
-            this.tabPage2.Name = "tabPage2";
-            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(982, 355);
-            this.tabPage2.TabIndex = 1;
-            this.tabPage2.Text = "Website";
-            // 
-            // panel2
-            // 
-            this.panel2.AutoScroll = true;
-            this.panel2.BackColor = System.Drawing.Color.Gainsboro;
-            this.panel2.Controls.Add(this.label4);
-            this.panel2.Controls.Add(this.labelGenre2);
-            this.panel2.Controls.Add(this.label5);
-            this.panel2.Controls.Add(this.label22);
-            this.panel2.Controls.Add(this.label6);
-            this.panel2.Controls.Add(this.label7);
-            this.panel2.Controls.Add(this.label8);
-            this.panel2.Controls.Add(this.lblMyRating);
-            this.panel2.Controls.Add(this.label14);
-            this.panel2.Controls.Add(this.lblResponse);
-            this.panel2.Controls.Add(this.label9);
-            this.panel2.Controls.Add(this.lblimdbID);
-            this.panel2.Controls.Add(this.label15);
-            this.panel2.Controls.Add(this.lblimdbVotes);
-            this.panel2.Controls.Add(this.label10);
-            this.panel2.Controls.Add(this.lblimdbRating);
-            this.panel2.Controls.Add(this.label16);
-            this.panel2.Controls.Add(this.lblMetascore);
-            this.panel2.Controls.Add(this.label11);
-            this.panel2.Controls.Add(this.lblDVD);
-            this.panel2.Controls.Add(this.label17);
-            this.panel2.Controls.Add(this.lblType);
-            this.panel2.Controls.Add(this.label12);
-            this.panel2.Controls.Add(this.lblProduction);
-            this.panel2.Controls.Add(this.label18);
-            this.panel2.Controls.Add(this.lblBoxOffice);
-            this.panel2.Controls.Add(this.label13);
-            this.panel2.Controls.Add(this.lblAwards);
-            this.panel2.Controls.Add(this.label19);
-            this.panel2.Controls.Add(this.lblLanguage);
-            this.panel2.Controls.Add(this.lblReleased);
-            this.panel2.Controls.Add(this.lblCountry);
-            this.panel2.Controls.Add(this.lblRuntime2);
-            this.panel2.Location = new System.Drawing.Point(6, 6);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(970, 343);
-            this.panel2.TabIndex = 0;
-            // 
-            // webBrowser1
-            // 
-            this.webBrowser1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.webBrowser1.Location = new System.Drawing.Point(3, 3);
-            this.webBrowser1.MinimumSize = new System.Drawing.Size(20, 20);
-            this.webBrowser1.Name = "webBrowser1";
-            this.webBrowser1.Size = new System.Drawing.Size(976, 349);
-            this.webBrowser1.TabIndex = 0;
-            // 
             // FormDetailedMovie
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -690,12 +690,12 @@
             this.Load += new System.EventHandler(this.FormDetailedMovie_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox)).EndInit();
             this.tabControl1.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
-            this.tabPage2.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
+            this.tabPage2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox)).EndInit();
             this.ResumeLayout(false);
 
         }

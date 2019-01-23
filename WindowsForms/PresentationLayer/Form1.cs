@@ -31,14 +31,14 @@ namespace PresentationLayer
 
             DataGridViewImageColumn view_button = new DataGridViewImageColumn();
             view_button.Name = "Details";
-            view_button.Image = Image.FromFile("D:/Irena/FAKS/2.godina/NET-projekt/povecalo.png");
+            view_button.Image = Image.FromFile("F:/programiranje projekti/povecalo.png");
             view_button.Width = 20;
             view_button.AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
             dataGridViewFilmovi.Columns.Add(view_button);
 
             DataGridViewImageColumn delete_button = new DataGridViewImageColumn();
             delete_button.Name = "Delete";
-            delete_button.Image = Image.FromFile("D:/Irena/FAKS/2.godina/NET-projekt/delete.png");
+            delete_button.Image = Image.FromFile("F:/programiranje projekti/delete.png");
             delete_button.Width = 20;
             delete_button.AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
             dataGridViewFilmovi.Columns.Add(delete_button);

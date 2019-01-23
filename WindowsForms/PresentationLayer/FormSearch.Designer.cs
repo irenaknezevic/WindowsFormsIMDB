@@ -494,7 +494,7 @@
             this.tabPage2.Location = new System.Drawing.Point(4, 26);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(981, 449);
+            this.tabPage2.Size = new System.Drawing.Size(982, 355);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Website";
             this.tabPage2.UseVisualStyleBackColor = true;
@@ -505,7 +505,7 @@
             this.webBrowser.Location = new System.Drawing.Point(3, 3);
             this.webBrowser.MinimumSize = new System.Drawing.Size(20, 20);
             this.webBrowser.Name = "webBrowser";
-            this.webBrowser.Size = new System.Drawing.Size(975, 443);
+            this.webBrowser.Size = new System.Drawing.Size(976, 349);
             this.webBrowser.TabIndex = 0;
             // 
             // label21

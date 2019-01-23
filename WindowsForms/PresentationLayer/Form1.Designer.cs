@@ -31,6 +31,7 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPagePretraga = new System.Windows.Forms.TabPage();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.textBoxGodina = new System.Windows.Forms.TextBox();
             this.labelGodinaFilma = new System.Windows.Forms.Label();
             this.labelNazivFilma = new System.Windows.Forms.Label();
@@ -44,12 +45,11 @@
             this.Year = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Genre = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Director = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.tabControl1.SuspendLayout();
             this.tabPagePretraga.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.tabPageMojiFilmovi.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewFilmovi)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // tabControl1
@@ -82,6 +82,17 @@
             this.tabPagePretraga.Size = new System.Drawing.Size(846, 398);
             this.tabPagePretraga.TabIndex = 0;
             this.tabPagePretraga.Text = "Search";
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.ImageLocation = "F:\\programiranje projekti\\images.jpg";
+            this.pictureBox1.InitialImage = ((System.Drawing.Image)(resources.GetObject("pictureBox1.InitialImage")));
+            this.pictureBox1.Location = new System.Drawing.Point(82, 76);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(150, 112);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 6;
+            this.pictureBox1.TabStop = false;
             // 
             // textBoxGodina
             // 
@@ -202,17 +213,6 @@
             this.Director.HeaderText = "Director";
             this.Director.Name = "Director";
             // 
-            // pictureBox1
-            // 
-            this.pictureBox1.ImageLocation = "C:\\Users\\Lenovo\\Desktop\\images.jpg";
-            this.pictureBox1.InitialImage = ((System.Drawing.Image)(resources.GetObject("pictureBox1.InitialImage")));
-            this.pictureBox1.Location = new System.Drawing.Point(82, 76);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(150, 112);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 6;
-            this.pictureBox1.TabStop = false;
-            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
@@ -231,9 +231,9 @@
             this.tabControl1.ResumeLayout(false);
             this.tabPagePretraga.ResumeLayout(false);
             this.tabPagePretraga.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.tabPageMojiFilmovi.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewFilmovi)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
