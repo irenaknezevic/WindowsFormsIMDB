@@ -112,7 +112,7 @@
             this.panel1.Controls.Add(this.lblTitleNew);
             this.panel1.Location = new System.Drawing.Point(13, 13);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1013, 600);
+            this.panel1.Size = new System.Drawing.Size(1013, 551);
             this.panel1.TabIndex = 0;
             // 
             // tabControl1
@@ -646,7 +646,7 @@
             // 
             this.buttonAdd.BackColor = System.Drawing.Color.Green;
             this.buttonAdd.Font = new System.Drawing.Font("Modern No. 20", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonAdd.Location = new System.Drawing.Point(730, 619);
+            this.buttonAdd.Location = new System.Drawing.Point(730, 573);
             this.buttonAdd.Name = "buttonAdd";
             this.buttonAdd.Size = new System.Drawing.Size(135, 40);
             this.buttonAdd.TabIndex = 25;
@@ -657,7 +657,7 @@
             // textBoxYourRating
             // 
             this.textBoxYourRating.Font = new System.Drawing.Font("Modern No. 20", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxYourRating.Location = new System.Drawing.Point(553, 635);
+            this.textBoxYourRating.Location = new System.Drawing.Point(559, 582);
             this.textBoxYourRating.Name = "textBoxYourRating";
             this.textBoxYourRating.Size = new System.Drawing.Size(100, 24);
             this.textBoxYourRating.TabIndex = 26;
@@ -666,7 +666,7 @@
             // 
             this.label23.AutoSize = true;
             this.label23.Font = new System.Drawing.Font("Modern No. 20", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label23.Location = new System.Drawing.Point(450, 638);
+            this.label23.Location = new System.Drawing.Point(456, 586);
             this.label23.Name = "label23";
             this.label23.Size = new System.Drawing.Size(97, 17);
             this.label23.TabIndex = 27;
@@ -676,7 +676,7 @@
             // 
             this.buttonClose.BackColor = System.Drawing.Color.Red;
             this.buttonClose.Font = new System.Drawing.Font("Modern No. 20", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonClose.Location = new System.Drawing.Point(871, 619);
+            this.buttonClose.Location = new System.Drawing.Point(871, 573);
             this.buttonClose.Name = "buttonClose";
             this.buttonClose.Size = new System.Drawing.Size(135, 40);
             this.buttonClose.TabIndex = 28;
@@ -690,7 +690,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.BackColor = System.Drawing.SystemColors.Menu;
-            this.ClientSize = new System.Drawing.Size(1034, 666);
+            this.ClientSize = new System.Drawing.Size(1034, 626);
             this.Controls.Add(this.buttonClose);
             this.Controls.Add(this.label23);
             this.Controls.Add(this.textBoxYourRating);

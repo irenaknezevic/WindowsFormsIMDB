@@ -111,7 +111,7 @@
             this.panel1.Controls.Add(this.lblTitle);
             this.panel1.Location = new System.Drawing.Point(13, 13);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1013, 600);
+            this.panel1.Size = new System.Drawing.Size(1013, 551);
             this.panel1.TabIndex = 23;
             // 
             // tabControl1
@@ -666,7 +666,7 @@
             // 
             this.buttonCloseDetails.BackColor = System.Drawing.Color.Red;
             this.buttonCloseDetails.Font = new System.Drawing.Font("Modern No. 20", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonCloseDetails.Location = new System.Drawing.Point(882, 619);
+            this.buttonCloseDetails.Location = new System.Drawing.Point(886, 580);
             this.buttonCloseDetails.Name = "buttonCloseDetails";
             this.buttonCloseDetails.Size = new System.Drawing.Size(120, 40);
             this.buttonCloseDetails.TabIndex = 24;
@@ -680,7 +680,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.BackColor = System.Drawing.SystemColors.Menu;
-            this.ClientSize = new System.Drawing.Size(1034, 666);
+            this.ClientSize = new System.Drawing.Size(1034, 629);
             this.Controls.Add(this.buttonCloseDetails);
             this.Controls.Add(this.panel1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
